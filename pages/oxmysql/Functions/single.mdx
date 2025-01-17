@@ -13,7 +13,7 @@ Returns all selected columns for a single row.
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     local row = MySQL.single.await('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ? LIMIT 1', {
         identifier
     })
@@ -26,7 +26,7 @@ Returns all selected columns for a single row.
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     const row = await MySQL.single('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ? LIMIT 1', [
       identifier
     ])
@@ -48,7 +48,7 @@ Returns all selected columns for a single row.
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     MySQL.single('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ? LIMIT 1', {
         identifier
     }, function(row)
@@ -61,7 +61,7 @@ Returns all selected columns for a single row.
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     MySQL.single('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ? LIMIT 1', [
       identifier
     ], (row) => {

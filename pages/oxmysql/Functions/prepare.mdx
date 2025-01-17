@@ -19,7 +19,7 @@ Unlike [rawExecute](./rawExecute), the SELECT statement will return a column, ro
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     local response = MySQL.prepare.await('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
         identifier
     })
@@ -31,7 +31,7 @@ Unlike [rawExecute](./rawExecute), the SELECT statement will return a column, ro
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     const response = await MySQL.prepare('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', [
       identifier
     ])
@@ -51,7 +51,7 @@ Unlike [rawExecute](./rawExecute), the SELECT statement will return a column, ro
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     MySQL.prepare('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
         identifier
     }, function(response)
@@ -62,7 +62,7 @@ Unlike [rawExecute](./rawExecute), the SELECT statement will return a column, ro
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     MySQL.prepare('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', [
       identifier
     ], (response) => {

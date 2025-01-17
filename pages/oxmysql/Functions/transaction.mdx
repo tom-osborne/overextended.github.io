@@ -16,7 +16,7 @@ The return value is a boolean, which is the result of the transaction.
 When using this format, you must pass an array containing sets of queries and parameters to the transaction method.  
 In this case, your queries do not necessarily match and the values are unique to each query.
 
-```lua
+```lua copy
 -- You might rename "values" as "parameters" for mysql-async compatibility.
 local queries = {
     { query = 'INSERT INTO `test` (id) VALUES (?)', values = { 1 }},
@@ -35,7 +35,7 @@ local queries = {
 When using this format, you must pass an array containing queries and a set containing shared parameters to the transaction method.  
 In this case, your queries do not necessarily match and the values are unique to each query.
 
-```lua
+```lua copy
 -- You might rename "values" as "parameters" for mysql-async compatibility.
 local queries = {
     'INSERT INTO `test` (id, name) VALUES (@someid, @somename)',
@@ -54,7 +54,7 @@ local values = {
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     local success = MySQL.transaction.await(queries, values --[[leave nil for specific format]])
     print(success)
     ```
@@ -62,7 +62,7 @@ local values = {
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     const success = await MySQL.transaction(queries, values /*leave nil for specific format*/)
     console.log(success)
     ```
@@ -81,7 +81,7 @@ local values = {
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     -- specific
     MySQL.transaction(queries, values, function(success)
         print(success)
@@ -96,7 +96,7 @@ local values = {
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     // specific
     MySQL.transaction(queries, (success) => {
       console.log(success)

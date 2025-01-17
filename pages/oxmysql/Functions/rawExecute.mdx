@@ -20,7 +20,7 @@ When using SELECT, the return value will match `query`, `single`, or `scalar` de
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     local response = MySQL.rawExecute.await('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
         identifier
     })
@@ -32,7 +32,7 @@ When using SELECT, the return value will match `query`, `single`, or `scalar` de
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     const response = await MySQL.rawExecute('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', [
       identifier
     ])
@@ -52,7 +52,7 @@ When using SELECT, the return value will match `query`, `single`, or `scalar` de
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     MySQL.rawExecute('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
         identifier
     }, function(response)
@@ -63,7 +63,7 @@ When using SELECT, the return value will match `query`, `single`, or `scalar` de
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     MySQL.rawExecute('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', [
       identifier
     ], (response) => {

@@ -13,7 +13,7 @@ Returns the first column for a single row.
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     local firstName = MySQL.scalar.await('SELECT `firstname` FROM `users` WHERE `identifier` = ? LIMIT 1', {
         identifier
     })
@@ -24,7 +24,7 @@ Returns the first column for a single row.
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     const firstName = await MySQL.scalar('SELECT `firstname` FROM `users` WHERE `identifier` = ? LIMIT 1', [
       identifier
     ])
@@ -46,7 +46,7 @@ Returns the first column for a single row.
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     MySQL.scalar('SELECT `firstname` FROM `users` WHERE `identifier` = ? LIMIT 1', {
         identifier
     }, function(firstName)
@@ -57,7 +57,7 @@ Returns the first column for a single row.
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     MySQL.scalar('SELECT `firstname` FROM `users` WHERE `identifier` = ? LIMIT 1', [
       identifier
     ], (firstName) => {

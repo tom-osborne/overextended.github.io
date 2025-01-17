@@ -13,7 +13,7 @@ Inserts a new entry into the database and returns the insert id for the row, if 
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     local id = MySQL.insert.await('INSERT INTO `users` (identifier, firstname, lastname) VALUES (?, ?, ?)', {
         identifier, firstName, lastName
     })
@@ -24,7 +24,7 @@ Inserts a new entry into the database and returns the insert id for the row, if 
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     const id = await MySQL.insert('INSERT INTO `users` (identifier, firstname, lastname) VALUES (?, ?, ?)', [
       identifier, firstName, lastName
     ])
@@ -46,7 +46,7 @@ Inserts a new entry into the database and returns the insert id for the row, if 
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     MySQL.insert('INSERT INTO `users` (identifier, firstname, lastname) VALUES (?, ?, ?)', {
         identifier, firstName, lastName
     }, function(id)
@@ -57,7 +57,7 @@ Inserts a new entry into the database and returns the insert id for the row, if 
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     MySQL.insert('INSERT INTO `users` (identifier, firstname, lastname) VALUES (?, ?, ?)', [
       identifier, firstName, lastName
     ], (id) => {

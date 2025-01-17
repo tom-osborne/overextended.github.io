@@ -9,7 +9,7 @@ Speeds will vary greatly based on system hardware, database settings, database v
 
 This script tests export times when using the Lua 5.4 runtime with lib/MySQL.lua syntax.
 
-```lua
+```lua copy
 local function execQuery(msg, fn, query, parameters)
     local start = os.nanotime()
     local result = fn(query, parameters)
@@ -94,7 +94,7 @@ end)
 
 ## Results
 
-```yaml
+```yaml copy
 [script:test] initialise test_table
 [script:test] Executed 4 queries in 42.7789ms
 [script:test]

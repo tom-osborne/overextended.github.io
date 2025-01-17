@@ -13,7 +13,7 @@ When selecting data, returns all matching rows and columns; otherwise, returns d
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     local response = MySQL.query.await('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
         identifier
     })
@@ -29,7 +29,7 @@ When selecting data, returns all matching rows and columns; otherwise, returns d
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     const response = await MySQL.query('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', [
       identifier
     ])
@@ -55,7 +55,7 @@ When selecting data, returns all matching rows and columns; otherwise, returns d
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     MySQL.query('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
         identifier
     }, function(response)
@@ -71,7 +71,7 @@ When selecting data, returns all matching rows and columns; otherwise, returns d
   </Tab>
   <Tab>
 
-    ```js
+    ```js copy
     MySQL.query('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', [
       identifier
     ], (response) => {
