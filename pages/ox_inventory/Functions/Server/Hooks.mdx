@@ -4,7 +4,7 @@ Event hooks allow 3rd party resources to define new behaviour without modifying 
 
 ## registerHook
 
-```lua
+```lua copy
 exports.ox_inventory:registerHook(eventName, function(payload) end, options)
 ```
 
@@ -44,7 +44,7 @@ By returning `false`, you can cancel the action and revert the inventory state.
 
 Blacklists "water" from being moved into or from gloveboxes and trunks.
 
-```lua
+```lua copy
 local hookId = exports.ox_inventory:registerHook('swapItems', function(payload)
     print(json.encode(payload, { indent = true }))
     return false
@@ -74,7 +74,7 @@ By returning `false`, you can cancel the action and keep the player's inventory 
 
 Disables gloveboxes and trunks.
 
-```lua
+```lua copy
 local hookId = exports.ox_inventory:registerHook('openInventory', function(payload)
     print(json.encode(payload, { indent = true }))
     return false
@@ -102,7 +102,7 @@ By returning a table you can modify or replace the metadata given to an item.
 
 Sets the label for "water" to "Mineral Water".
 
-```lua
+```lua copy
 local hookId = exports.ox_inventory:registerHook('createItem', function(payload)
     print(json.encode(payload, { indent = true }))
     local metadata = payload.metadata
@@ -137,7 +137,7 @@ Triggered when an item is about to be purchased and can return `false` to preven
 
 Prevents players from purchasing items at General stores.
 
-```lua
+```lua copy
 local hookId = exports.ox_inventory:registerHook('buyItem', function(payload)
     print(json.encode(payload, { indent = true, sort_keys = true }))
     return false
@@ -170,7 +170,7 @@ end, {
 
 Prevent lockpicks from being crafted by players.
 
-```lua
+```lua copy
 local hookId = exports.ox_inventory:registerHook('craftItem', function(payload)
     print(json.encode(payload, { indent = true, sort_keys = true }))
     return false
@@ -188,7 +188,7 @@ end, {
 Removes a hook created by the invoking resource with the the specified id.  
 If no id is specified then all hooks registered by the resource are removed.
 
-```lua
+```lua copy
 exports.ox_inventory:removeHooks(id)
 ```
 

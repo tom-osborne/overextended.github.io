@@ -13,7 +13,7 @@ A table containing cached function results, which may be constants or infrequent
 
 Values can be cached permanently, or added with a timeout.
 
-```lua
+```lua copy
 cache(key, func, timeout)
 ```
 
@@ -24,7 +24,7 @@ cache(key, func, timeout)
 - timeout?: `number`
   - a timer in milliseconds to clear the cached state.
 
-```lua
+```lua copy
 local i = 0
 
 while true do

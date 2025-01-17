@@ -13,12 +13,12 @@ The input dialog window allows you to take data from the user by setting input f
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.inputDialog(heading, rows, options)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.inputDialog(heading, rows, options);
@@ -184,12 +184,12 @@ Force closes the active input dialog and sets its return data as `nil`.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.closeInputDialog()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.closeInputDialog();
@@ -203,7 +203,7 @@ Force closes the active input dialog and sets its return data as `nil`.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     local input = lib.inputDialog('Basic dialog', {'First row', 'Second row'})
 
     if not input then return end
@@ -215,7 +215,7 @@ Force closes the active input dialog and sets its return data as `nil`.
       This function is **asynchronous** requiring you to do a `.then` callback on the promise or make your function `async`.
     </Callout>
 
-    ```ts
+    ```ts copy
     const input = await lib.inputDialog('Basic dialog', ['First row', 'Second row']);
 
     if (!input) return;
@@ -230,7 +230,7 @@ Force closes the active input dialog and sets its return data as `nil`.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     local input = lib.inputDialog('Dialog title', {
       {type = 'input', label = 'Text input', description = 'Some input description', required = true, min = 4, max = 16},
       {type = 'number', label = 'Number input', description = 'Some number description', icon = 'hashtag'},
@@ -254,7 +254,7 @@ Force closes the active input dialog and sets its return data as `nil`.
       This function is **asynchronous** requiring you to do a `.then` callback on the promise or make your function `async`.
     </Callout>
 
-    ```ts
+    ```ts copy
     const input = await lib.inputDialog('Police locker', [
       { type: 'input', label: 'Text input', description: 'Some input description', required: true, min: 3, max: 16 },
       { type: 'number', label: 'Number input', description: 'Some number description', icon: 'hashtag' },

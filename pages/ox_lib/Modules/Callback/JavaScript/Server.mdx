@@ -4,7 +4,7 @@
 
 ### triggerClientCallback
 
-```ts
+```ts copy
 triggerClientCallback(eventName, playerId, ...args)
 ```
 
@@ -16,7 +16,7 @@ triggerClientCallback(eventName, playerId, ...args)
 
 ### onClientCallback
 
-```ts
+```ts copy
 onClientCallback(eventName, cb)
 ```
 
@@ -27,11 +27,11 @@ onClientCallback(eventName, cb)
 
 For this example to fully make sense take a look at the example on the [client](./Client#usage-example) page for the callbacks.
 
-```ts
+```ts copy
 import { onClientCallback, triggerClientCallback } from '@overextended/ox_lib/server';
 ```
 
-```ts
+```ts copy
 onClientCallback('test:server', (playerId, ...args: [number, null, number, null, null, number]) => {
   console.log('onClientCallback', playerId, ...args);
   return {
@@ -40,7 +40,7 @@ onClientCallback('test:server', (playerId, ...args: [number, null, number, null,
 });
 ```
 
-```ts
+```ts copy
 setTimeout(async () => {
   const response = await triggerClientCallback<{ clientValue: string }>('test:client', 1, [1, null, 3, null, null, 6])
   if (!response) return;

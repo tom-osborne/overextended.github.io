@@ -4,7 +4,7 @@
 
 ### triggerServerCallback
 
-```ts
+```ts copy
 triggerServerCallback(eventName, delay, ...args)
 ```
 
@@ -17,7 +17,7 @@ triggerServerCallback(eventName, delay, ...args)
 
 ### onServerCallback
 
-```ts
+```ts copy
 onServerCallback(eventName, cb)
 ```
 
@@ -28,11 +28,11 @@ onServerCallback(eventName, cb)
 
 For this example to fully make sense take a look at the example on the [server](./Server#usage-example) page for the callbacks.
 
-```ts
+```ts copy
 import { onServerCallback, triggerServerCallback } from '@overextended/ox_lib/client'
 ```
 
-```ts
+```ts copy
 onServerCallback('test:client', (...args: [number, number, string]) => {
   console.log(args);
   return {
@@ -41,7 +41,7 @@ onServerCallback('test:client', (...args: [number, number, string]) => {
 });
 ```
 
-```ts
+```ts copy
 setTimeout(async () => {
   const args = [1, null, 3, null, null, 6];
   const response = await triggerServerCallback<{ serverValue: number }>('test:server', 1, args);

@@ -6,7 +6,7 @@ Provides a versatile timer system with options for asynchronous operation, pause
 
 ### lib.timer
 
-```lua
+```lua copy
 lib.timer(time, onEnd, async)
 ```
 
@@ -20,7 +20,7 @@ Returns:
 - timer: `OxTimer`
 
 #### Example
-```lua
+```lua copy
 
 local timer = lib.timer(5000, function()
    print("timer ended")
@@ -33,12 +33,12 @@ end)
 
 Pauses an active timer until `timer:play()` or `timer:forceEnd()` is called.
 
-```lua
+```lua copy
 timer:pause()
 ```
 
 #### Example
-```lua
+```lua copy
 local timer = lib.timer(5000, function()
     print("timer ended")
 end, true)
@@ -49,12 +49,12 @@ timer:pause()
 ### play
 Resume a timer if it is paused with `timer:pause()`.
 
-```lua
+```lua copy
 timer:play()
 ```
 
 #### Example
-```lua
+```lua copy
 local timer = lib.timer(5000, function()
     print("timer ended")
 end, true)
@@ -71,14 +71,14 @@ timer:play()
 
 Immediately ends the timer and optionally triggers the onEnd callback.
 
-```lua
+```lua copy
 timer:forceEnd(triggerOnEnd)
 ```
 
 - triggerOnEnd: `boolean`
 
 #### Example
-```lua
+```lua copy
 local timer = lib.timer(5000, function()
     print("timer ended")
 end, true)
@@ -94,7 +94,7 @@ timer:forceEnd(false)
 ### isPaused
 Checks if the timer is paused from calling `timer:pause()` previously.
 
-```lua
+```lua copy
 timer:isPaused()
 ```
 
@@ -102,7 +102,7 @@ Returns:
 - isPaused: `boolean`
 
 #### Example
-```lua
+```lua copy
 local timer = lib.timer(5000, function()
     print("timer ended")
 end, true)
@@ -117,7 +117,7 @@ print(timer:isPaused()) -- true
 ### getTimeLeft
 Returns the remaining time on the timer in the given format rounded to 2 decimal places
 
-```lua
+```lua copy
 timer:getTimeLeft(format)
 -- format: 'ms' = miliseconds, 's' = seconds, 'm' = minutes, 'h' = hours, nil = all returned in a table
 ```
@@ -127,7 +127,7 @@ Returns:
 - time: `number` | `{ms: number, s: number, m: number, h: number}`
 
 #### Example
-```lua
+```lua copy
 local timer = lib.timer(5000, function()
     print("timer ended")
 end, true)
@@ -142,13 +142,13 @@ print(timer:getTimeLeft())     -- {ms = 5000, s = 5.00, m = 0.08, h = 0.00 }
 ### restart
 Resets and starts the timer.
 
-```lua
+```lua copy
 timer:restart()
 ```
 
 #### Example
 
-```lua
+```lua copy
 -- this will create a timer that just keeps restarting itself
 local timer
 

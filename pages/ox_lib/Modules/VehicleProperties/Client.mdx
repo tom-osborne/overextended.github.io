@@ -17,12 +17,12 @@ lib.getVehicleProperties(vehicle)
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.getVehicleProperties(GetVehiclePedIsUsing(PlayerPedId()))
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     lib.getVehicleProperties(GetVehiclePedIsUsing(PlayerPedId()))
@@ -34,7 +34,7 @@ lib.getVehicleProperties(vehicle)
 
 Sets properties on a vehicle (i.e. mods, plate text, etc.) and returns true if the client owns the entity.
 
-```lua
+```lua copy
 lib.setVehicleProperties(vehicle, props)
 ```
 
@@ -43,14 +43,14 @@ lib.setVehicleProperties(vehicle, props)
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     RegisterNetEvent('ox_lib:setVehicleProperties', function(netid, data)
         lib.setVehicleProperties(NetToVeh(netid), data)
     end)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import { setVehicleProperties } from '@overextended/ox_lib/client'
 
     onNet('ox_lib:setVehicleProperties', (netid, data) => {
@@ -67,7 +67,7 @@ lib.setVehicleProperties(vehicle, props)
 
 The server should tell the owner of the entity to set properties, using the following trigger.
 
-```lua
+```lua copy
 TriggerClientEvent('ox_lib:setVehicleProperties', entityOwner, vehNetId, data)
 ```
 

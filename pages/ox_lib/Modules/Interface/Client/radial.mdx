@@ -17,12 +17,12 @@ Item or array of items added to the global radial menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.addRadialItem(items)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.addRadialItem(items);
@@ -52,12 +52,12 @@ Id of an item to be removed from the global menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.removeRadialItem(item)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.removeRadialItem(item);
@@ -73,12 +73,12 @@ Removes all items from the radial menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.clearRadialItems()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.clearRadialItems();
@@ -92,12 +92,12 @@ Registers a radial sub menu with predefined options.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.registerRadial(radial)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.registerRadial(radial);
@@ -123,12 +123,12 @@ Hides the radial menu if one is open.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.hideRadial()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.hideRadial();
@@ -142,12 +142,12 @@ Disallow players from opening the radial menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.disableRadial(state)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.disableRadial(state);
@@ -164,12 +164,12 @@ Returns the id of the currently open radial menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     local id = lib.getCurrentRadialId()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     let id = lib.getCurrentRadialId();
@@ -188,7 +188,7 @@ Here's a use case example with some global options and an option utilising the l
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     exports('myMenuHandler', function(menu, item)
         print(menu, item)
 
@@ -268,7 +268,7 @@ Here's a use case example with some global options and an option utilising the l
       Points system in the lib isn't available for the npm package.
     </Callout>
 
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     exports('myMenuHandler', (menu, item) => {

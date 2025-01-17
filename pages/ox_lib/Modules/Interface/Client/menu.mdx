@@ -15,12 +15,12 @@ Registers and caches a menu under the specified id.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.registerMenu(data, cb)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.registerMenu(data, cb);
@@ -79,12 +79,12 @@ Displays the menu with the provided id.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.showMenu(id)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.showMenu(id);
@@ -98,12 +98,12 @@ Displays the menu with the provided id.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.hideMenu(onExit)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.hideMenu(onExit);
@@ -120,12 +120,12 @@ Returns the id of the currently open menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.getOpenMenu()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.getOpenMenu();
@@ -137,12 +137,12 @@ Returns the id of the currently open menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.setMenuOptions(id, options, index)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.setMenuOptions(id, options, index);
@@ -160,12 +160,12 @@ Replaces the 3rd index option of the specified menu
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.setMenuOptions('some_menu_id', {label = 'New option', icon = 'plus'}, 3)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.setMenuOptions('some_menu_id', { label: 'New option', icon: 'plus' }, 3);
@@ -183,7 +183,7 @@ First we register the menu with our specified options then we call the show func
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.registerMenu({
         id = 'some_menu_id',
         title = 'Menu title',
@@ -233,7 +233,7 @@ First we register the menu with our specified options then we call the show func
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.registerMenu(

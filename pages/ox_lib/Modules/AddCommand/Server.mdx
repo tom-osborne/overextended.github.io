@@ -2,7 +2,7 @@
 
 Registers commands and simplifies argument validation, permissions, and chat suggestions.
 
-```lua
+```lua copy
 lib.addCommand(commandName, properties, cb)
 ```
 
@@ -16,7 +16,7 @@ lib.addCommand(commandName, properties, cb)
     - type?: `'number'` or `'playerId'` or `'string'` or `'longString'`
     - optional?: `boolean`
 
-```lua
+```lua copy
 lib.addCommand('giveitem', {
     help = 'Gives an item to a player',
     params = {

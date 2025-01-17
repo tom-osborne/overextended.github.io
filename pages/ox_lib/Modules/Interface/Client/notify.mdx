@@ -15,19 +15,19 @@ Custom notifications with a lot of styling options.
   <Tab>
     <Tabs items={["Client", "Server"]}>
       <Tab>
-        ```lua
+        ```lua copy
         lib.notify(data)
         ```
       </Tab>
       <Tab>
-        ```lua
+        ```lua copy
         TriggerClientEvent('ox_lib:notify', source, data)
         ```
       </Tab>
     </Tabs>
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.notify(data);
@@ -75,7 +75,7 @@ Custom notifications with a lot of styling options.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.notify({
         title = 'Notification title',
         description = 'Notification description',
@@ -84,7 +84,7 @@ Custom notifications with a lot of styling options.
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.notify({
@@ -102,7 +102,7 @@ Custom notifications with a lot of styling options.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.notify({
         id = 'some_identifier',
         title = 'Notification title',
@@ -122,7 +122,7 @@ Custom notifications with a lot of styling options.
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.notify({

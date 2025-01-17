@@ -4,7 +4,7 @@
 
 Simple and centralised distance checking, supporting callbacks when entering, leaving, and standing in-range of set coordinates.
 
-```ts
+```ts copy
 Point<T>({coords, distance, onEnter, onExit, nearby, args})
 ```
 
@@ -15,7 +15,7 @@ Point<T>({coords, distance, onEnter, onExit, nearby, args})
 - nearby?: `function`
 - args?: `T`
 
-```ts
+```ts copy
 import { Point, cache } from '@overextended/ox_lib/client'
 
 function nearby(this: Point<{dunak: string}>) {

@@ -13,7 +13,7 @@ with the `garbage` item.
 
 First of all we need to create a base item that we'll use to apply metadata to.
 
-```lua filename="/data/items.lua"
+```lua copy filename="/data/items.lua"
 ['pokemon_card'] = {
     label = 'Pokemon card',
     weight = 10,
@@ -29,7 +29,7 @@ do not want them all to weigh the same you can leave it out and apply weight thr
 
 We'll also make the item usable by calling the `pokemon_card` export in the `pokemon` resource.
 
-```lua filename="pokemon/server.lua"
+```lua copy filename="pokemon/server.lua"
 exports('pokemon_card', function(event, item, inventory, slot, data)
     if event == 'usingItem' then
         local itemSlot = exports.ox_inventory:GetSlot(inventory.id, slot)
@@ -64,7 +64,7 @@ We'll use these properties to create our pokemon cards out of the `pokemon_card`
 
 We can easily create metadata items by defining a hook using [createItem](../Functions/Server/Hooks#createitem) and adding it to a shop as well.
 
-```lua filename="/data/shops.lua"
+```lua copy filename="/data/shops.lua"
 inventory = {
     {name = 'pokemon_card', price = 300, metadata = {
         label = 'Charizard',
@@ -109,7 +109,7 @@ As seen above when our item is usable, the metadata properties are all there and
 We can display our custom metadata we set on our charizard card by either using string concatenation and adding them to
 the description or by using the [displayMetadata](../Functions/Client#displaymetadata) _client_ function.
 
-```lua
+```lua copy
 exports.ox_inventory:displayMetadata({
     hp = 'HP',
     attack = 'ATK',

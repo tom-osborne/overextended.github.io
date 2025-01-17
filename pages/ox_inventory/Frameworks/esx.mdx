@@ -24,7 +24,7 @@ Ox Inventory is a complete replacement for existing item, inventory, and weapon 
 - Use a compatible version of [ESX Legacy](https://github.com/esx-framework/esx-legacy) (1.6.0+).
 - Modify your `server.cfg`, starting ox_inventory immediately after es_extended.
 
-```yaml
+```yaml copy filename="server.cfg"
 start oxmysql
 start ox_lib
 start es_extended
@@ -48,7 +48,7 @@ You should read through the functions section for further information, but the f
 
 <Tabs items={["ESX", "Ox Inventory"]}>
   <Tab>
-    ```lua
+    ```lua copy
     if xPlayer.getInventoryItem('acetone').count > 2 and xPlayer.getInventoryItem('antifreeze').count > 4 and xPlayer.getInventoryItem('sudo').count > 9 then
         xPlayer.removeInventoryItem("acetone", 3)
         xPlayer.removeInventoryItem("antifreeze", 5)
@@ -59,13 +59,13 @@ You should read through the functions section for further information, but the f
   <Tab>
     Add the following code somewhere in your resource to cache the exports metatable.
 
-    ```lua
+    ```lua copy
     local ox_inventory = exports.ox_inventory
     ```
 
     You will be able to reference any functions exposed through the export.
 
-    ```lua
+    ```lua copy
     local items = ox_inventory:Search(source, 'count', {'acetone', 'antifreeze', 'sudo'})
     if items and items.acetone > 2 and items.antifreeze > 4 and items.sudo > 9 then
         ox_inventory:RemoveItem(source, 'acetone', 3)

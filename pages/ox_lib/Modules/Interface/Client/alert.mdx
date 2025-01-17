@@ -16,12 +16,12 @@ Returns whether the player pressed the confirm button or canceled the dialog.
   <Tab>
     <Tabs items={["Client", "Server"]}>
       <Tab>
-        ```lua
+        ```lua copy
         lib.alertDialog(data)
         ```
       </Tab>
       <Tab>
-        ```lua
+        ```lua copy
         TriggerClientEvent('ox_lib:alertDialog', source, data)
         ```
       </Tab>
@@ -32,7 +32,7 @@ Returns whether the player pressed the confirm button or canceled the dialog.
       This function is **asynchronous** requiring you to do a `.then` callback on the promise or make your function `async`.
     </Callout>
 
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.alertDialog(data);
@@ -65,12 +65,12 @@ Force closes the active alert dialog and sets its return data as `nil`
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.closeAlertDialog()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.closeAlertDialog();
@@ -82,7 +82,7 @@ Force closes the active alert dialog and sets its return data as `nil`
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     local alert = lib.alertDialog({
         header = 'Hello there',
         content = 'General Kenobi  \n Markdown support!',
@@ -94,7 +94,7 @@ Force closes the active alert dialog and sets its return data as `nil`
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     const alert = await lib.alertDialog({

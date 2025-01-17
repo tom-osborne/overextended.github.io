@@ -8,7 +8,7 @@ For some examples you can refer to [defaults.lua](https://github.com/overextende
 
 Toggle the availability of the targeting menu.
 
-```lua
+```lua copy
 exports.ox_target:disableTargeting(state)
 ```
 
@@ -19,7 +19,7 @@ exports.ox_target:disableTargeting(state)
 
 Creates new targetable options which are displayed at all times.
 
-```lua
+```lua copy
 exports.ox_target:addGlobalOption(options)
 ```
 
@@ -29,7 +29,7 @@ exports.ox_target:addGlobalOption(options)
 
 Removes all options from the global options list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeGlobalOption(optionNames)
 ```
 
@@ -39,7 +39,7 @@ exports.ox_target:removeGlobalOption(optionNames)
 
 Creates new targetable options for all Object entity types.
 
-```lua
+```lua copy
 exports.ox_target:addGlobalObject(options)
 ```
 
@@ -49,7 +49,7 @@ exports.ox_target:addGlobalObject(options)
 
 Removes all options from the global Object list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeGlobalObject(optionNames)
 ```
 
@@ -59,7 +59,7 @@ exports.ox_target:removeGlobalObject(optionNames)
 
 Creates new targetable options for all Ped entity types (excluding players).
 
-```lua
+```lua copy
 exports.ox_target:addGlobalPed(options)
 ```
 
@@ -69,7 +69,7 @@ exports.ox_target:addGlobalPed(options)
 
 Removes all options from the global Ped list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeGlobalPed(optionNames)
 ```
 
@@ -79,7 +79,7 @@ exports.ox_target:removeGlobalPed(optionNames)
 
 Creates new targetable options for all Player entities.
 
-```lua
+```lua copy
 exports.ox_target:addGlobalPlayer(options)
 ```
 
@@ -89,7 +89,7 @@ exports.ox_target:addGlobalPlayer(options)
 
 Removes all options from the global Player list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeGlobalPlayer(optionNames)
 ```
 
@@ -99,7 +99,7 @@ exports.ox_target:removeGlobalPlayer(optionNames)
 
 Creates new targetable options for all Vehicle entity types.
 
-```lua
+```lua copy
 exports.ox_target:addGlobalVehicle(options)
 ```
 
@@ -109,7 +109,7 @@ exports.ox_target:addGlobalVehicle(options)
 
 Removes all options from the global Vehicle list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeGlobalVehicle(optionNames)
 ```
 
@@ -119,7 +119,7 @@ exports.ox_target:removeGlobalVehicle(optionNames)
 
 Creates new targetable options for a specific model or list of models.
 
-```lua
+```lua copy
 exports.ox_target:addModel(models, options)
 ```
 
@@ -130,7 +130,7 @@ exports.ox_target:addModel(models, options)
 
 Removes all options from the models list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeModel(models, optionNames)
 ```
 
@@ -141,7 +141,7 @@ exports.ox_target:removeModel(models, optionNames)
 
 Creates new targetable options for a specific network id or list of network ids (see [NetworkGetNetworkIdFromEntity](https://docs.fivem.net/natives/?_0x9E35DAB6)).
 
-```lua
+```lua copy
 exports.ox_target:addEntity(netIds, options)
 ```
 
@@ -152,7 +152,7 @@ exports.ox_target:addEntity(netIds, options)
 
 Removes all options from the networked entities list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeEntity(netIds, optionNames)
 ```
 
@@ -163,7 +163,7 @@ exports.ox_target:removeEntity(netIds, optionNames)
 
 Creates new targetable options for a specific entity handle or list of entity handles.
 
-```lua
+```lua copy
 exports.ox_target:addLocalEntity(entities, options)
 ```
 
@@ -174,7 +174,7 @@ exports.ox_target:addLocalEntity(entities, options)
 
 Removes all options from the entities list with the option names.
 
-```lua
+```lua copy
 exports.ox_target:removeLocalEntity(entities, optionNames)
 ```
 
@@ -185,7 +185,7 @@ exports.ox_target:removeLocalEntity(entities, optionNames)
 
 Creates a new targetable [sphere zone](../../ox_lib/Modules/Zones/Shared#libzonessphere).
 
-```lua
+```lua copy
 exports.ox_target:addSphereZone(parameters)
 ```
 
@@ -206,7 +206,7 @@ Return:
 
 Creates a new targetable [box zone](../../ox_lib/Modules/Zones/Shared#libzonesbox).
 
-```lua
+```lua copy
 exports.ox_target:addBoxZone(parameters)
 ```
 
@@ -228,7 +228,7 @@ Return:
 
 Creates a new targetable [poly zone](../../ox_lib/Modules/Zones/Shared#libzonespoly).
 
-```lua
+```lua copy
 exports.ox_target:addPolyZone(parameters)
 ```
 
@@ -251,7 +251,7 @@ Return:
 
 Removes a targetable zone with the given id (returned by addBoxZone/addSphereZone).
 
-```lua
+```lua copy
 exports.ox_target:removeZone(id)
 ```
 

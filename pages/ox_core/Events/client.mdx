@@ -10,7 +10,7 @@ These events are triggered by ox_core when an action occurs. You should not trig
 
 When a character is loaded
 
-```lua
+```lua copy
 function(playerId: number, isNew: boolean)
 ```
 
@@ -18,7 +18,7 @@ function(playerId: number, isNew: boolean)
 
 On each status tick, returning changed statuses
 
-```lua
+```lua copy
 function(statuses: Record<string, number>)
 ```
 
@@ -38,7 +38,7 @@ When the character is revived
 
 When the character is added or removed from a group
 
-```lua
+```lua copy
 function(groupName: string, grade?: number)
 ```
 
@@ -46,7 +46,7 @@ function(groupName: string, grade?: number)
 
 When the character got a new license
 
-```lua
+```lua copy
 function(licenseName: string)
 ```
 
@@ -54,7 +54,7 @@ function(licenseName: string)
 
 When a character's license is removed.
 
-```lua
+```lua copy
 function(licenseName: string)
 ```
 
@@ -62,7 +62,7 @@ function(licenseName: string)
 
 When the player has spawned.
 
-```lua
+```lua copy
 function(userId: number, characters: Character[])
 ```
 
@@ -70,6 +70,6 @@ function(userId: number, characters: Character[])
 
 When the player has chosen their character.
 
-```lua
+```lua copy
 function(character: Character, groups: Record<string, number>)
 ```

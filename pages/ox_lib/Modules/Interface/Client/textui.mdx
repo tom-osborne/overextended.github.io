@@ -17,12 +17,12 @@ Show the TextUI window.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.showTextUI(text, options)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.showTextUI(text, options);
@@ -47,12 +47,12 @@ Hides the currently visible TextUI window
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.hideTextUI()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.hideTextUI();
@@ -66,12 +66,12 @@ Returns whether Text UI is opened or not. The currently displayed text is return
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     local isOpen, text = lib.isTextUIOpen()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     const [isOpen, text] = lib.isTextUIOpen();
@@ -85,12 +85,12 @@ Returns whether Text UI is opened or not. The currently displayed text is return
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.showTextUI('[E] - Fuel vehicle')
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.showTextUI('[E] - Fuel vehicle');
@@ -104,7 +104,7 @@ Returns whether Text UI is opened or not. The currently displayed text is return
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.showTextUI('[E] - Pick apple', {
         position = "top-center",
         icon = 'hand',
@@ -117,7 +117,7 @@ Returns whether Text UI is opened or not. The currently displayed text is return
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.showTextUI('[E] - Pick apple', {

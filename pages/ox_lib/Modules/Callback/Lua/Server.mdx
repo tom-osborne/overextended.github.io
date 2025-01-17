@@ -6,7 +6,7 @@
 
 The response is handled in a separate coroutine.
 
-```lua
+```lua copy
 lib.callback(name, playerId, cb, ...)
 ```
 
@@ -15,7 +15,7 @@ lib.callback(name, playerId, cb, ...)
 - cb: `function`
 - ...: `any`
 
-```lua
+```lua copy
 lib.callback('ox:getNearbyVehicles', source, function(vehicles)
     for i = 1, #vehicles do
         DeleteEntity(entity)
@@ -27,7 +27,7 @@ end, args.radius)
 
 The current coroutine is yielded until a response is received.
 
-```lua
+```lua copy
 lib.callback.await(name, playerId, ...)
 ```
 
@@ -35,7 +35,7 @@ lib.callback.await(name, playerId, ...)
 - playerId: `number`
 - ...: `any`
 
-```lua
+```lua copy
 local vehicles = lib.callback.await('ox:getNearbyVehicles', source, args.radius)
 
 for i = 1, #vehicles do
@@ -49,14 +49,14 @@ end
 
 Register an event handler for responding to client requests.
 
-```lua
+```lua copy
 lib.callback.register(name, cb)
 ```
 
 - name: `string`
 - cb: `function`
 
-```lua
+```lua copy
 lib.callback.register('ox_inventory:getItemCount', function(source, item, metadata, target)
     local inventory = target and Inventory(target) or Inventory(source)
     return (inventory and Inventory.GetItem(inventory, item, metadata, true)) or 0

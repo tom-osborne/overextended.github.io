@@ -2,7 +2,7 @@
 
 Creates a new account for a character with the given charId or stateId.
 
-```lua
+```lua copy
 Ox.CreateAccount(ownerId, label)
 ```
 
@@ -19,7 +19,7 @@ Ox.CreateAccount(ownerId, label)
 
 Creates a new group from the given data, handling all database interactions internally.
 
-```lua
+```lua copy
 Ox.CreateGroup(data)
 ```
 
@@ -39,7 +39,7 @@ Ox.CreateGroup(data)
 
 Creates a new vehicle, which will be saved to the database if it has an assigned owner or group.
 
-```lua
+```lua copy
 Ox.CreateVehicle(data, coords, heading)
 ```
 
@@ -62,7 +62,7 @@ Ox.CreateVehicle(data, coords, heading)
 
 Deletes the account invoice with the given invoiceId.
 
-```lua
+```lua copy
 Ox.DeleteAccountInvoice(invoiceId)
 ```
 
@@ -80,7 +80,7 @@ Ox.DeleteAccountInvoice(invoiceId)
 
 Deletes all data associated with the given group name, such as group grades, vehicles, etc.
 
-```lua
+```lua copy
 Ox.DeleteGroup(groupName)
 ```
 
@@ -93,7 +93,7 @@ Ox.DeleteGroup(groupName)
 
 Generate a unique vehicle plate that doesn't exist in database.
 
-```lua
+```lua copy
 Ox.GenerateVehiclePlate()
 ```
 
@@ -105,7 +105,7 @@ Ox.GenerateVehiclePlate()
 
 Generate a unique vehicle identification number that doesn't exist in database.
 
-```lua
+```lua copy
 Ox.GenerateVehicleVin(modelName)
 ```
 
@@ -122,7 +122,7 @@ Ox.GenerateVehicleVin(modelName)
 
 Get the `OxAccount` with the given accountId.
 
-```lua
+```lua copy
 Ox.GetAccount(accountId)
 ```
 
@@ -138,7 +138,7 @@ Ox.GetAccount(accountId)
 
 Get the default `OxAccount` for a character by their charId or stateId.
 
-```lua
+```lua copy
 Ox.GetCharacterAccount(id)
 ```
 
@@ -155,7 +155,7 @@ Ox.GetCharacterAccount(id)
 Get a character's charId from their stateId.  
 _Note: This queries the database and shouldn't be used excessively_
 
-```lua
+```lua copy
 Ox.GetCharIdFromStateId(stateId)
 ```
 
@@ -171,7 +171,7 @@ Ox.GetCharIdFromStateId(stateId)
 
 Get the `OxAccount` for a group.
 
-```lua
+```lua copy
 Ox.GetGroupAccount(groupName)
 ```
 
@@ -187,7 +187,7 @@ Ox.GetGroupAccount(groupName)
 
 Returns an array of group names which have the given group type.
 
-```lua
+```lua copy
 Ox.GetGroupsByType(groupType)
 ```
 
@@ -203,7 +203,7 @@ Ox.GetGroupsByType(groupType)
 
 Get an `OxGroup` from its name.
 
-```lua
+```lua copy
 Ox.GetGroup(name)
 ```
 
@@ -219,7 +219,7 @@ Ox.GetGroup(name)
 
 Get an `OxPlayer` from its enity id.
 
-```lua
+```lua copy
 Ox.GetPlayer(entityId)
 ```
 
@@ -235,7 +235,7 @@ Ox.GetPlayer(entityId)
 
 Get the first `OxPlayer` matching a filter.
 
-```lua
+```lua copy
 Ox.GetPlayerFromFilter(filter)
 ```
 
@@ -253,7 +253,7 @@ Ox.GetPlayerFromFilter(filter)
 
 Get an `OxPlayer` from its user id.
 
-```lua
+```lua copy
 Ox.GetPlayerFromUserId(userId)
 ```
 
@@ -269,7 +269,7 @@ Ox.GetPlayerFromUserId(userId)
 
 Get an array of containing `OxPlayer` for all players matching a filter, if given.
 
-```lua
+```lua copy
 Ox.GetPlayers(filter)
 ```
 
@@ -287,7 +287,7 @@ Ox.GetPlayers(filter)
 
 Get an `OxVehicle` from its entity id.
 
-```lua
+```lua copy
 Ox.GetVehicle(entityId)
 ```
 
@@ -303,7 +303,7 @@ Ox.GetVehicle(entityId)
 
 Get an `OxVehicle` from its network id.
 
-```lua
+```lua copy
 Ox.GetVehicleFromNetId(netId)
 ```
 
@@ -319,7 +319,7 @@ Ox.GetVehicleFromNetId(netId)
 
 Get an `OxVehicle` from its VIN.
 
-```lua
+```lua copy
 Ox.GetVehicleFromVin(vin)
 ```
 
@@ -335,7 +335,7 @@ Ox.GetVehicleFromVin(vin)
 
 Removes a permission from a specified group and minimum grade.
 
-```lua
+```lua copy
 Ox.RemoveGroupPermission(groupName, grade, permission)
 ```
 
@@ -349,7 +349,7 @@ Ox.RemoveGroupPermission(groupName, grade, permission)
 
 Save all players to the database.
 
-```lua
+```lua copy
 Ox.SaveAllPlayers()
 ```
 
@@ -357,7 +357,7 @@ Ox.SaveAllPlayers()
 
 Save all vehicles to the database.
 
-```lua
+```lua copy
 Ox.SaveAllVehicles()
 ```
 
@@ -365,7 +365,7 @@ Ox.SaveAllVehicles()
 
 Assigns a permission to a specified group and minimum grade, which will be inherited by higher grades.
 
-```lua
+```lua copy
 Ox.SetGroupPermission(groupName, grade, permission, value)
 ```
 
@@ -380,7 +380,7 @@ Ox.SetGroupPermission(groupName, grade, permission, value)
 
 Spawns an `OxVehicle` with the given dbId, if it hasn't already been spawned.
 
-```lua
+```lua copy
 Ox.SpawnVehicle(dbId, coords, heading)
 ```
 

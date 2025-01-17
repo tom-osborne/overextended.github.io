@@ -31,7 +31,7 @@ Register an event handler that is triggered when the cached value is updated.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.onCache(key, function(value) end)
     ```
 
@@ -43,7 +43,7 @@ Register an event handler that is triggered when the cached value is updated.
       - `mount` (RedM only)
     - value: `any`
 
-    ```lua
+    ```lua copy
     lib.onCache('vehicle', function(value)
         print('old vehicle:', cache.vehicle)
         print('new vehicle:', value)
@@ -51,7 +51,7 @@ Register an event handler that is triggered when the cached value is updated.
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import { onCache } from '@overextended/ox_lib/client';
 
     onCache(key, (value) => {});
@@ -65,7 +65,7 @@ Register an event handler that is triggered when the cached value is updated.
       - `mount` (RedM only)
     - value: `any`
 
-    ```ts
+    ```ts copy
     import { cache, onCache } from '@overextended/ox_lib/client';
 
     lib.onCache('vehicle', (value) => {

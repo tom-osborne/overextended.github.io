@@ -32,7 +32,7 @@ We **strongly** recommend referring to [Guides](../guides) to setup necessary de
 - Download and setup [MariaDB 11.4+](https://mariadb.com/downloads/community/community-server/).
 - Run the following commands in your CLI (e.g. Terminal, Command Prompt).
 
-```bash
+```bash copy filename="terminal"
 git clone https://github.com/overextended/ox_core.git
 cd ox_core
 pnpm i
@@ -59,7 +59,7 @@ You can import ox_core definitions by loading `@ox_core/lib/init.lua` into your 
   <Tab>
 
     This can be a client_script or server_script, if preferred.
-    ```lua
+    ```lua copy filename="fxmanifest.lua"
     shared_script '@ox_core/lib/init.lua'
     ```
 
@@ -67,7 +67,7 @@ You can import ox_core definitions by loading `@ox_core/lib/init.lua` into your 
   <Tab>
 
     If you prefer, you can use our [require](../ox_lib/Modules/Require/Shared) function from [ox_lib](../ox_lib).
-    ```lua
+    ```lua copy
     local Ox = require '@ox_core.lib.init'
     ```
 
@@ -82,7 +82,7 @@ To use ox_core with your JavaScript resources you'll need to use our npm package
 
 To get started, try our [fivem-typescript-boilerplate](https://github.com/overextended/fivem-typescript-boilerplate) and install the ox_core package.
 
-```bash
+```bash copy filename="terminal"
 pnpm i @overextended/ox_core
 ```
 

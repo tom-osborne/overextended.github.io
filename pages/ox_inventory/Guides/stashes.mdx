@@ -36,7 +36,7 @@ Firstly, we need to define the stashes properties.
 
 Below the value is hardset, but it could be loaded from the database (especially if there are unknown fields, i.e. owner)
 
-```lua
+```lua copy
 -- Server
 local stash = {
     id = '42wallabyway',
@@ -58,7 +58,7 @@ exports.ox_inventory:openInventory('stash', {id='42wallabyway', owner=property.o
 
 The following sample is based on esx_property's db data.
 
-```lua
+```lua copy
 -- Server
 local properties
 

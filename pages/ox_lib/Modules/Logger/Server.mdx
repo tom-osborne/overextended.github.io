@@ -4,7 +4,7 @@ import { Steps, Tabs, Tab } from 'nextra-theme-docs';
 
 ## lib.logger
 
-```lua
+```lua copy
 lib.logger(source, event, message, ...)
 ```
 
@@ -20,7 +20,7 @@ lib.logger(source, event, message, ...)
 <br />
 <u>**Example**</u>
 
-```lua
+```lua copy
 local vehicle = Ox.CreateVehicle(false, `sultanrs`, vector4(-56.479122, -1116.870362, 26.432250, 0.000030517578))
 lib.logger(-1, 'CreateVehicle', json.encode(vehicle))
 ```
@@ -40,7 +40,7 @@ lib.logger(-1, 'CreateVehicle', json.encode(vehicle))
 
   Set your API key and [Datadog site](https://docs.datadoghq.com/getting_started/site/) using the following convars.
 
-  ```bash
+  ```bash copy filename="server.cfg"
   set datadog:key "yourapikey"
   set datadog:site "datadoghq.com"
   ```
@@ -79,7 +79,7 @@ It is designed to be very cost effective and easy to operate.
   ### Config
   Use the following convars to set your logging service, endpoint, and authentication details.
 
-  ```bash
+  ```bash copy filename="server.cfg"
   set ox:logger "loki"
   set loki:user "<insert your user>"
   set loki:password "<insert the api key or password>"
@@ -98,7 +98,7 @@ It is designed to be very cost effective and easy to operate.
     ### Create a new token
     You'll need to create a new token with the type `Logs`.
     ### Config
-  ```bash
+  ```bash copy filename="server.cfg"
   set ox:logger "fivemanage"
   set fivemanage:key "YOUR_API_KEY"
   ```

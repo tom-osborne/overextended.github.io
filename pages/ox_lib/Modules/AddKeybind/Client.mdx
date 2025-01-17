@@ -32,7 +32,7 @@ A table representing a keybind with the following properties.
 
 ## lib.addKeybind
 
-```lua
+```lua copy
 lib.addKeybind(data)
 ```
 
@@ -52,7 +52,7 @@ lib.addKeybind(data)
   - onReleased?: `function(self: CKeybind)`
     - Function triggered on keybind release
 
-```lua
+```lua copy
 local keybind = lib.addKeybind({
     name = 'respects',
     description = 'press F to pay respects',
@@ -70,7 +70,7 @@ local keybind = lib.addKeybind({
 
 Keybinds can be enabled / disabled by using the disable method.
 
-```lua
+```lua copy
 keybind:disable(true) -- disables the keybind
 keybind:disable(false) -- enables the keybind
 ```

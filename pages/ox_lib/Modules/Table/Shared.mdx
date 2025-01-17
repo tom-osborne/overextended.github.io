@@ -6,7 +6,7 @@ Adds additional functions alongside the standard table library.
 
 Checks if `table` contains the given `value`. Only intended for simple values and unnested tables.
 
-```lua
+```lua copy
 lib.table.contains(tbl, value)
 ```
 
@@ -20,7 +20,7 @@ Return:
 
 Compares if two values are equal, iterating over tables and matching both keys and values.
 
-```lua
+```lua copy
 lib.table.matches(tableOne, tableTwo)
 ```
 
@@ -34,7 +34,7 @@ Return:
 
 Recursively clones a table to ensure no table references remain.
 
-```lua
+```lua copy
 lib.table.deepclone(tbl)
 ```
 
@@ -47,7 +47,7 @@ Return:
 
 Merges two tables together. Duplicate keys will be added together if they are numbers, otherwise `tableTwo`'s value will be used.
 
-```lua
+```lua copy
 lib.table.merge(tableOne, tableTwo)
 ```
 
@@ -61,7 +61,7 @@ Return:
 
 Makes a table read-only, preventing further modification. Unfrozen tables stored within `table` are still mutable.
 
-```lua
+```lua copy
 lib.table.freeze(tbl)
 ```
 
@@ -74,7 +74,7 @@ Return:
 
 Returns true if `tbl` is set as read-only.
 
-```lua
+```lua copy
 lib.table.isFrozen(tbl)
 ```
 

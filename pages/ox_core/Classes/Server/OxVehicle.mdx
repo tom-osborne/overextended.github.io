@@ -18,7 +18,7 @@ title: OxVehicle
 
 Despawns the vehicle and removes it from the database.
 
-```lua
+```lua copy
 vehicle.delete()
 ```
 
@@ -27,7 +27,7 @@ vehicle.delete()
 
 Despawns the vehicle, optionally saving it to the database.
 
-```lua
+```lua copy
 vehicle.despawn(save)
 ```
 
@@ -40,7 +40,7 @@ vehicle.despawn(save)
 
 Get the value of specific key from the vehicle's metadata.
 
-```lua
+```lua copy
 vehicle.get(key)
 ```
 
@@ -57,7 +57,7 @@ vehicle.get(key)
 
 Returns the vehicle's current coordinates.
 
-```lua
+```lua copy
 vehicle.getCoords()
 ```
 
@@ -69,7 +69,7 @@ vehicle.getCoords()
 
 Returns the vehicle's properties object.
 
-```lua
+```lua copy
 vehicle.getProperties()
 ```
 
@@ -83,7 +83,7 @@ vehicle.getProperties()
 
 Returns the vehicle's statebag interface.
 
-```lua
+```lua copy
 vehicle.getState()
 ```
 
@@ -96,7 +96,7 @@ vehicle.getState()
 
 Returns the vehicle's "stored" state.
 
-```lua
+```lua copy
 vehicle.getStored()
 ```
 
@@ -109,7 +109,7 @@ vehicle.getStored()
 
 Spawns a new entity for the vehicle, removing an existing entity if it exists and reapplying stored vehicle properties.
 
-```lua
+```lua copy
 vehicle.respawn(coords, rotation)
 ```
 
@@ -123,7 +123,7 @@ vehicle.respawn(coords, rotation)
 
 Saves the vehicle to the database.
 
-```lua
+```lua copy
 vehicle.save()
 ```
 
@@ -136,7 +136,7 @@ vehicle.save()
 
 Stores a value in the vehicle's metadata, which will be saved to the database (_this behaviour is likely to be removed_).
 
-```lua
+```lua copy
 player.set(key, value)
 ```
 
@@ -150,7 +150,7 @@ player.set(key, value)
 
 Sets the vehicle as a group vehicle "owned" by the given group name, or removes the group if omitted.
 
-```lua
+```lua copy
 vehicle.setGroup(groupName)
 ```
 
@@ -163,7 +163,7 @@ vehicle.setGroup(groupName)
 
 Sets the owner of a vehicle as the given charId, or removes the owner if omitted.
 
-```lua
+```lua copy
 vehicle.setOwner(charId)
 ```
 
@@ -178,7 +178,7 @@ Sets the registered plate of a vehicle to the given value. The plate will be pad
 
 This plate is not necessarily the displayed plate on vehicle properties.
 
-```lua
+```lua copy
 vehicle.setPlate(plate: string)
 ```
 
@@ -187,7 +187,7 @@ vehicle.setPlate(plate: string)
 
 Saves the properties (mods, extras, etc.) stored on the vehicle, optionally applying them to the entity.
 
-```lua
+```lua copy
 vehicle.setProperties(properties, apply)
 ```
 
@@ -201,7 +201,7 @@ vehicle.setProperties(properties, apply)
 
 Sets the vehicle as "stored" at the given value (e.g. impound, garage, null), and optionally despawns and saves the vehicle.
 
-```lua
+```lua copy
 vehicle.setStored(value, despawn)
 ```
 

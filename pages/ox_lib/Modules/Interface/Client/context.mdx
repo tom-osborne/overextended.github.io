@@ -13,12 +13,12 @@ Used for registering a context menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.registerContext(context)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.registerContext(context);
@@ -96,12 +96,12 @@ Opens a registered context menu by its id.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.showContext(id)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.showContext(id);
@@ -118,12 +118,12 @@ Hides any currently visible context menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.hideContext(onExit)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.hideContext(onExit);
@@ -143,12 +143,12 @@ If no context menu is open returns `nil`.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.getOpenContextMenu()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.getOpenContextMenu();
@@ -167,7 +167,7 @@ First we register the menu with our specified options then we call the show func
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.registerContext({
       id = 'some_menu',
       title = 'Some context menu',
@@ -214,7 +214,7 @@ First we register the menu with our specified options then we call the show func
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client';
 
     lib.registerContext({
@@ -269,7 +269,7 @@ Then we can also register our second menu called `other_menu`
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.registerContext({
       id = 'other_menu',
       title = 'Other context menu',
@@ -286,7 +286,7 @@ Then we can also register our second menu called `other_menu`
   ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     lib.registerContext({
       id: 'other_menu',
       title: 'Other context menu',
@@ -308,7 +308,7 @@ And the event that we are going to run from the `some_menu` menu, which is going
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     RegisterNetEvent('test_event', function(args)
       lib.registerContext({
         id = 'event_menu',
@@ -327,7 +327,7 @@ And the event that we are going to run from the `some_menu` menu, which is going
 
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     onNet('test_event', (args: { someValue: number }) => {
       lib.registerContext({
         id: 'event_menu',
@@ -351,14 +351,14 @@ Lastly we register a test command to show the `some_menu` menu.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     RegisterCommand('testcontext', function()
       lib.showContext('some_menu')
     end)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     RegisterCommand('testcontext', () => {
       lib.showContext('some_menu');
     });

@@ -5,7 +5,7 @@
 Calls a function repeatedly until it receives a non-nil value, or it times out.  
 The function result is then returned.
 
-```lua
+```lua copy
 lib.waitFor(cb, errMessage, timeout)
 ```
 
@@ -17,7 +17,7 @@ lib.waitFor(cb, errMessage, timeout)
   - The duration to run the function for, defaulting to 1000ms, unless set to `false`.
 
 
-```lua
+```lua copy
 local value --[['abc']] = lib.waitFor(function()
     if math.random(0, 1) == 1 then return 'abc' end
 end)

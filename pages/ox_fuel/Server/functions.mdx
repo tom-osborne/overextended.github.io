@@ -4,7 +4,7 @@
 
 Override the built-in payment method.
 
-```lua
+```lua copy
 exports.ox_fuel:setPaymentMethod(method)
 ```
 
@@ -14,7 +14,7 @@ exports.ox_fuel:setPaymentMethod(method)
 
 ### Example
 
-```lua
+```lua copy
 exports.ox_fuel:setPaymentMethod(function(playerId, amount)
     local xPlayer = ESX.GetPlayerFromId(playerId)
     local bankAmount = xPlayer.getAccount('bank').money

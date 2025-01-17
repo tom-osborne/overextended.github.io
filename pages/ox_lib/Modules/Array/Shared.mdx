@@ -8,7 +8,7 @@ A table used as a prototype for the Array class. Functions can be used as class 
 
 Constructs instance of Array containing the given elements.
 
-```lua
+```lua copy
 lib.array:new(...)
 ```
 
@@ -22,7 +22,7 @@ lib.array:new(...)
 
 Determines if the given table is an instance of Array or an array-like table.
 
-```lua
+```lua copy
 lib.array.isArray(tbl)
 ```
 
@@ -39,7 +39,7 @@ Combines the elements of two arrays into a new array.
 - a: `Array`
 - b: `Array`
 
-```lua
+```lua copy
 lib.array.merge(a, b)
 ```
 
@@ -54,7 +54,7 @@ Tests if all elements in an array succeed in passing the provided test function.
 - arr: `Array`
 - testFn: `function`
 
-```lua
+```lua copy
 lib.array.every(arr, testFn)
 ```
 
@@ -69,7 +69,7 @@ Creates a new array containing the elements from an array that pass the provided
 - arr: `Array`
 - testFn: `function`
 
-```lua
+```lua copy
 lib.array.filter(arr, testFn)
 ```
 
@@ -86,7 +86,7 @@ Returns the first element of an array the passes the provided test function.
 - reverse?: `boolean`
   - Iterate over the array in reverse order.
 
-```lua
+```lua copy
 lib.array.find(arr, function(element) end, reverse)
 ```
 
@@ -103,7 +103,7 @@ Returns the index of the first element of an array the passes the provided test 
 - reverse?: `boolean`
   - Iterate over the array in reverse order.
 
-```lua
+```lua copy
 lib.array.findIndex(arr, function(element) end, reverse)
 ```
 
@@ -120,7 +120,7 @@ Returns the index of the first element of an array the matches the provided valu
 - reverse?: `boolean`
   - Iterate over the array in reverse order.
 
-```lua
+```lua copy
 lib.array.indexOf(arr, value, reverse)
 ```
 
@@ -135,7 +135,7 @@ Executes the provided function for each element in an array.
 - arr: `Array`
 - cb: `function`
 
-```lua
+```lua copy
 lib.array.forEach(arr, function(element) end, reverse)
 ```
 
@@ -150,7 +150,7 @@ Concatenates all elements of an array into a string, separated by commas or the 
 - arr: `Array`
 - seperator?: `string`
 
-```lua
+```lua copy
 lib.array.join(arr, seperator)
 ```
 
@@ -164,7 +164,7 @@ Removes the last element from an array and returns the value.
 
 - arr: `Array`
 
-```lua
+```lua copy
 lib.array.pop(arr)
 ```
 
@@ -179,7 +179,7 @@ Adds the given elements to the end of an array and returns the new array length.
 - arr: `Array`
 - ...: `any`
 
-```lua
+```lua copy
 lib.array.push(arr, ...)
 ```
 
@@ -193,7 +193,7 @@ Removes the first element from an array and returns the value.
 
 - arr: `Array`
 
-```lua
+```lua copy
 lib.array.shift(arr)
 ```
 
@@ -210,7 +210,7 @@ If an initial value is provided it's used as the accumulator for the first index
 - reducer: `function`
 - initialValue?: `any`
 
-```lua
+```lua copy
 lib.array.reduce(arr, function(accumulator, element, index) end)
 ```
 

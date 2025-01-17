@@ -23,7 +23,7 @@ import { Tabs, Tab } from 'nextra-theme-docs';
 
 Get the value of specific key(s) from the account's metadata.
 
-```lua
+```lua copy
 account.get(key)
 ```
 
@@ -41,7 +41,7 @@ account.get(key)
 
 Add funds to the account.
 
-```lua
+```lua copy
 account.addBalance(data)
 ```
 
@@ -59,7 +59,7 @@ account.addBalance(data)
 
 <Tabs items={['Lua']}>
   <Tab>
-    ```lua
+    ```lua copy
     account.addBalance({ amount = 1000, message = 'Paycheck' })
     ```
 
@@ -71,7 +71,7 @@ account.addBalance(data)
 
 Remove funds from the account.
 
-```lua
+```lua copy
 account.removeBalance(data)
 ```
 
@@ -91,7 +91,7 @@ account.removeBalance(data)
 
 <Tabs items={['Lua']}>
   <Tab>
-    ```lua
+    ```lua copy
     account.removeBalance({ amount = 1000, message = 'Impound', overdraw = true })
     ```
 
@@ -102,7 +102,7 @@ account.removeBalance(data)
 
 Transfer funds to another account.
 
-```lua
+```lua copy
 account.transferBalance(data)
 ```
 
@@ -128,7 +128,7 @@ account.transferBalance(data)
 
 <Tabs items={['Lua']}>
   <Tab>
-    ```lua
+    ```lua copy
     account.transferBalance({
       toId = 100000000,
       amount = 20,
@@ -146,7 +146,7 @@ account.transferBalance(data)
 
 Deposit money into the account.
 
-```lua
+```lua copy
 account.depositMoney(playerId, amount, message, note)
 ```
 
@@ -169,7 +169,7 @@ account.depositMoney(playerId, amount, message, note)
 
 Withdraw money from the account.
 
-```lua
+```lua copy
 account.withdrawMoney(playerId, amount, message, note)
 ```
 
@@ -191,7 +191,7 @@ account.withdrawMoney(playerId, amount, message, note)
 
 Mark the account as deleted. It can no longer be accessed, but remains in the database.
 
-```lua
+```lua copy
 account.deleteAccount()
 ```
 
@@ -206,7 +206,7 @@ account.deleteAccount()
 
 Get the account access role of a character by charId or stateId.
 
-```lua
+```lua copy
 account.getCharacterRole(id)
 ```
 
@@ -223,7 +223,7 @@ account.getCharacterRole(id)
 
 Set the account access role of a character by charId or stateId.
 
-```lua
+```lua copy
 account.setCharacterRole(id, role)
 ```
 
@@ -243,7 +243,7 @@ account.setCharacterRole(id, role)
 
 Checks if a player's active character has permission to perform an action on the account.
 
-```lua
+```lua copy
 account.playerHasPermission(playerId, permission)
 ```
 
@@ -261,7 +261,7 @@ account.playerHasPermission(playerId, permission)
 
 Set the account as shared, allowing permissions to be assigned to other characters.
 
-```lua
+```lua copy
 account.setShared()
 ```
 
@@ -276,7 +276,7 @@ account.setShared()
 
 Create an unpaid invoice on the account.
 
-```lua
+```lua copy
 account.createInvoice(invoice)
 ```
 

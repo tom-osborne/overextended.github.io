@@ -40,7 +40,7 @@ Do not setup XAMPP just to run your database, and install [MariaDB](https://mari
 - Add `start oxmysql` to the top of your resource list.
 - Configure your mysql connection string and set it before starting any resources.
 
-```bash
+```bash copy
 # Use your preferred format. Make sure you only ever use set.
 set mysql_connection_string "mysql://root:12345@localhost:3306/fivem"
 set mysql_connection_string "user=root;password=12345;host=localhost;port=3306;database=fivem"
@@ -60,7 +60,7 @@ You will receive warnings if a query took a long time to complete, configurable 
 - Slow queries may not indicate a database issue (e.g. server hitches).
 - Slow queries on server startup are not necessarily problematic.
 
-```bash
+```bash copy
 set mysql_slow_query_warning 150
 ```
 
@@ -68,7 +68,7 @@ set mysql_slow_query_warning 150
 
 Enabling the debug option will print all queries in the server console; you can also use an array to only print from a list of resources instead.
 
-```bash
+```bash copy
 set mysql_debug true
 set mysql_debug [
   "ox_core",
@@ -78,7 +78,7 @@ set mysql_debug [
 
 You can temporarily modify the resource list with commands.
 
-```bash
+```bash copy
 oxmysql_debug remove ox_core
 oxmysql_debug add ox_core
 ```
@@ -100,7 +100,7 @@ Resources can import oxmysql methods by including our library, granting some typ
 
 Modify `fxmanifest.lua` for your resource, and add the following above any other script files.
 
-```lua
+```lua copy filename="fxmanifest.lua"
 server_script '@oxmysql/lib/MySQL.lua'
 ```
 
@@ -108,7 +108,7 @@ server_script '@oxmysql/lib/MySQL.lua'
 
 You can use raw exports, or install [our npm package](https://www.npmjs.com/package/@overextended/oxmysql) for intellisense and similar usage as Lua.
 
-```bash
+```bash copy
 # With pnpm
 pnpm add @overextended/oxmysql
 
@@ -121,7 +121,7 @@ npm install @overextended/oxmysql
 
 Import the oxmysql object into your resource.
 
-```js
+```js copy
 import { oxmysql as MySQL } from '@overextended/oxmysql';
 ```
 
@@ -129,7 +129,7 @@ import { oxmysql as MySQL } from '@overextended/oxmysql';
 
 When uncertain if a row should be inserted into the database, or an existing row should be updated, queries should check for duplicate keys.
 
-```lua
+```lua copy
 MySQL.prepare('INSERT INTO ox_inventory (owner, name, data) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE data = VALUES(data)', { owner, dbId, inventory })
 ```
 

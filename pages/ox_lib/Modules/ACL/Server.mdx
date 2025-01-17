@@ -11,14 +11,14 @@ Assigns the ace permission to a principal. Third parameter defaults to 'allow', 
 
 <Tabs items={["Lua", "JS"]}>
     <Tab>
-        ```lua
+        ```lua copy
         lib.addAce(principal, ace, allow)
 
         lib.addAce('group.admin', 'command.say')
         ```
     </Tab>
     <Tab>
-        ```ts
+        ```ts copy
         import lib from '@overextended/ox_lib/server'
 
         lib.addAce(principal, ace, allow)
@@ -38,14 +38,14 @@ Removes the ace permission from a principal. Third parameter defaults to 'allow'
 
 <Tabs items={["Lua", "JS"]}>
     <Tab>
-        ```lua
+        ```lua copy
         lib.removeAce(principal, ace, allow)
 
         lib.removeAce('group.admin', 'command.say')
         ```
     </Tab>
     <Tab>
-        ```ts
+        ```ts copy
         import lib from '@overextended/ox_lib/server'
 
         lib.removeAce(principal, ace, allow)
@@ -65,14 +65,14 @@ Assigns a principal to a parent principal. Children inherit permissions from the
 
 <Tabs items={["Lua", "JS"]}>
     <Tab>
-        ```lua
+        ```lua copy
         lib.addPrincipal(child, parent)
 
         lib.addPrincipal('player.1', 'group.moderator')
         ```
     </Tab>
     <Tab>
-        ```ts
+        ```ts copy
         import lib from '@overextended/ox_lib/server'
 
         lib.addPrincipal(child, parent)
@@ -91,14 +91,14 @@ Removes a principal from a parent principal.
 
 <Tabs items={["Lua", "JS"]}>
     <Tab>
-        ```lua
+        ```lua copy
         lib.removePrincipal(child, parent)
 
         lib.removePrincipal('player.1', 'group.moderator')
         ```
     </Tab>
     <Tab>
-        ```ts
+        ```ts copy
         import lib from '@overextended/ox_lib/server'
 
         lib.removePrincipal(child, parent)

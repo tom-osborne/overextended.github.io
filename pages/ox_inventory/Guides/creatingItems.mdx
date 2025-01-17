@@ -78,7 +78,7 @@ options for the item.
 
 <Tabs items={["Burger", "Burger with description", "Burger with notification"]}>
   <Tab>
-    ```lua
+    ```lua copy
     ['burger'] = {
         label = 'Burger',
         weight = 220,
@@ -100,7 +100,7 @@ options for the item.
   <Tab>
     A modified burger item which includes a description.
 
-    ```lua
+    ```lua copy
     ['burger'] = {
         label = 'Burger',
         description = 'Just what is the secret formula?'
@@ -123,7 +123,7 @@ options for the item.
   <Tab>
     A modified burger item, which gives you notifications on add and remove arguments.
 
-    ```lua
+    ```lua copy
     ['burger'] = {
         label = 'Burger',
         weight = 220,
@@ -161,7 +161,7 @@ Item callbacks can be added by defining an export (recommended), or by adding it
 When defining [item data](https://github.com/overextended/ox_inventory/blob/main/data/items.lua#L11), adding client.export will trigger an event on item use.
 The correct formatting is `export = resourceName.exportName`.
 
-```lua
+```lua copy
 exports('bandage', function(data, slot)
     local playerPed = PlayerPedId()
     local maxHealth = GetEntityMaxHealth(playerPed)
@@ -192,7 +192,7 @@ This can either be an export (recommended), or added to the bottom of [items/ser
 When defining [item data](https://github.com/overextended/ox_inventory/blob/main/data/items.lua#L14), adding server.export will trigger an event for the actions above.
 The correct formatting is `export = resourceName.exportName`.
 
-```lua
+```lua copy
 exports('bandage', function(event, item, inventory, slot, data)
     -- Player is attempting to use the item.
     if event == 'usingItem' then
@@ -245,7 +245,7 @@ You can also define the number of slots, the maximum weight, blacklist and white
 
 ### Example
 
-```lua filename="Register Example"
+```lua copy filename="Register Example"
 ['paperbag'] = {
     label = 'Paper Bag',
     weight = 1,
@@ -255,7 +255,7 @@ You can also define the number of slots, the maximum weight, blacklist and white
 },
 ```
 
-```lua filename="Properties Example"
+```lua copy filename="Properties Example"
 setContainerProperties('paperbag', {
 	slots = 5,
 	maxWeight = 1000,

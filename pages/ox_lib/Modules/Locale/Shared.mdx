@@ -13,7 +13,7 @@ setr ox:locale en
 
 Create a locales directory and a file for your language.
 
-```json filename="locales/en.json"
+```json copy filename="locales/en.json"
 {
   "grand_theft_auto": "grand theft auto",
   "male": "male",
@@ -22,7 +22,7 @@ Create a locales directory and a file for your language.
 }
 ```
 
-```json filename="locales/fr.json"
+```json copy filename="locales/fr.json"
 {
   "grand_theft_auto": "vol de voiture",
   "male": "homme",
@@ -31,7 +31,7 @@ Create a locales directory and a file for your language.
 }
 ```
 
-```lua filename="fxmanifest.lua"
+```lua copy filename="fxmanifest.lua"
 files {
   'locales/*.json'
 }
@@ -43,12 +43,12 @@ Initialise the locale module in your resource (once).
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-  ```lua
+  ```lua copy
   lib.locale()
   ```
   </Tab>
   <Tab>
-  ```ts
+  ```ts copy
   import {initLocale} from '@overextended/ox_lib/shared'
 
   initLocale()
@@ -62,13 +62,13 @@ Additional arguments can be sent to format the locale output.
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-    ```lua
+    ```lua copy
     locale(str, ...)
     ```
   </Tab>
   <Tab>
 
-    ```ts
+    ```ts copy
     import { locale } from '@overextended/ox_lib/shared'
 
     locale(str, ...)
@@ -84,7 +84,7 @@ Additional arguments can be sent to format the locale output.
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-  ```lua
+  ```lua copy
   -- Load the locale module
   lib.locale()
 
@@ -96,7 +96,7 @@ Additional arguments can be sent to format the locale output.
   </Tab>
   <Tab>
 
-    ```ts
+    ```ts copy
     import { initLocale, locale } from '@overextended/ox_lib/shared
 
     // Load the locale module
@@ -115,7 +115,7 @@ Additional arguments can be sent to format the locale output.
 
 You can create a locale string that references other locales to construct a phrase, rather than calling locale multiple times.
 
-```json
+```json copy
 {
   "hello": "hello %s",
   "my_name_is": "my name is %s",
@@ -126,13 +126,13 @@ You can create a locale string that references other locales to construct a phra
 <Tabs items={['Lua', 'JS']}>
   <Tab>
 
-  ```lua
+  ```lua copy
   print(locale('hello_my_name_is', 'doka', 'linden'))
   ```
   </Tab>
   <Tab>
 
-    ```ts
+    ```ts copy
     import { locale } from '@overextended/ox_lib/shared'
 
     console.log(locale('hello_my_name_is', 'doka', 'linden'))
@@ -144,7 +144,7 @@ You can create a locale string that references other locales to construct a phra
 
 Gets a locale string from another resource and adds it to the dict.
 
-```lua
+```lua copy
 lib.getLocale(resource, key)
 ```
 

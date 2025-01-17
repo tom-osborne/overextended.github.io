@@ -17,7 +17,7 @@ title: OxPlayer
 
 Grants a license to the player.
 
-```lua
+```lua copy
 player.addLicense(licenseName)
 ```
 
@@ -34,7 +34,7 @@ player.addLicense(licenseName)
 
 Increases the value of a status.
 
-```lua
+```lua copy
 player.addStatus(statusName, value)
 ```
 
@@ -52,7 +52,7 @@ player.addStatus(statusName, value)
 
 Registers a new character for a player that has not already selected a character.
 
-```lua
+```lua copy
 player.createCharacter(data)
 ```
 
@@ -74,7 +74,7 @@ player.createCharacter(data)
 
 Deletes a character with the given charId, if owned by the player and they have not selected a character.
 
-```lua
+```lua copy
 player.deleteCharacter(charId)
 ```
 
@@ -91,7 +91,7 @@ player.deleteCharacter(charId)
 
 Triggers a client event for the player.
 
-```lua
+```lua copy
 player.emit(eventName, ...args)
 ```
 
@@ -105,7 +105,7 @@ player.emit(eventName, ...args)
 
 Get the value of a specific key from the player's metadata.
 
-```lua
+```lua copy
 player.get(key)
 ```
 
@@ -122,7 +122,7 @@ player.get(key)
 
 Returns the player's default OxAccount object.
 
-```lua
+```lua copy
 player.getAccount()
 ```
 
@@ -135,7 +135,7 @@ player.getAccount()
 
 Returns the player's current coordinates.
 
-```lua
+```lua copy
 player.getCoords()
 ```
 
@@ -148,7 +148,7 @@ player.getCoords()
 
 Returns the player's grade of a given group name, or the first matched name and grade in a filter.
 
-```lua
+```lua copy
 player.getGroup(filter)
 ```
 
@@ -166,7 +166,7 @@ player.getGroup(filter)
 
 Returns the player's name and grade of a group with a matching type.
 
-```lua
+```lua copy
 player.getGroupByType(type)
 ```
 
@@ -184,7 +184,7 @@ player.getGroupByType(type)
 
 Returns an object of all groups the player is currently in, using the group name as a key.
 
-```lua
+```lua copy
 player.getGroups()
 ```
 
@@ -197,7 +197,7 @@ player.getGroups()
 
 Returns an object containing information for the specified license.
 
-```lua
+```lua copy
 player.getLicense(licenseName: string): object
 ```
 
@@ -217,7 +217,7 @@ player.getLicense(licenseName: string): object
 
 Returns an object containing information for all licenses.
 
-```lua
+```lua copy
 player.getLicenses()
 ```
 
@@ -234,7 +234,7 @@ player.getLicenses()
 
 Returns the value of the status.
 
-```lua
+```lua copy
 player.getStatus(statusName)
 ```
 
@@ -251,7 +251,7 @@ player.getStatus(statusName)
 
 Returns an object containing all statuses, using the status name as the key.
 
-```lua
+```lua copy
 player.getStatuses()
 ```
 
@@ -264,7 +264,7 @@ player.getStatuses()
 
 Checks if a user has been granted a permission by one of their groups.
 
-```lua
+```lua copy
 player.hasPermission(permission)
 ```
 
@@ -281,7 +281,7 @@ player.hasPermission(permission)
 
 Clears data for the active character and transitions the player to character selection, if valid.
 
-```lua
+```lua copy
 player.logout(save, dropped)
 ```
 
@@ -297,7 +297,7 @@ player.logout(save, dropped)
 
 Pays an account invoice with the given invoiceId.
 
-```lua
+```lua copy
 player.payInvoice(invoiceId)
 ```
 
@@ -316,7 +316,7 @@ player.payInvoice(invoiceId)
 
 Remove a license from the player.
 
-```lua
+```lua copy
 player.removeLicense(licenseName)
 ```
 
@@ -333,7 +333,7 @@ player.removeLicense(licenseName)
 
 Reduces the value of a status.
 
-```lua
+```lua copy
 player.removeStatus(statusName, value)
 ```
 
@@ -351,7 +351,7 @@ player.removeStatus(statusName, value)
 
 Saves the active character to the database.
 
-```lua
+```lua copy
 player.save()
 ```
 
@@ -360,7 +360,7 @@ player.save()
 
 Stores a value in the player's metadata, which can be optionally synced with the client.
 
-```lua
+```lua copy
 player.set(key, value, replicated)
 ```
 
@@ -375,7 +375,7 @@ player.set(key, value, replicated)
 
 Loads and sets a character as the player's active character. Takes a charId or an object containing new character data.
 
-```lua
+```lua copy
 player.setActiveCharacter(data)
 ```
 
@@ -408,7 +408,7 @@ player.setActiveCharacter(data)
 
 Sets a group the player is in as their active or "primary" group. If no arguments are passed, no active group will be set.
 
-```lua
+```lua copy
 player.setActiveGroup(groupName?: string, temporary?: boolean)
 ```
 
@@ -427,7 +427,7 @@ player.setActiveGroup(groupName?: string, temporary?: boolean)
 
 Sets the player's grade within a group. If grade is undefined or 0 they will be removed from the group.
 
-```lua
+```lua copy
 player.setGroup(groupName, grade)
 ```
 
@@ -445,7 +445,7 @@ player.setGroup(groupName, grade)
 
 Sets the value of a status.
 
-```lua
+```lua copy
 player.setStatus(statusName, value)
 ```
 
@@ -463,7 +463,7 @@ player.setStatus(statusName, value)
 
 Sets information on a player license.
 
-```lua
+```lua copy
 player.updateLicense(licenseName, key, value)
 ```
 

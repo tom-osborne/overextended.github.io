@@ -8,7 +8,7 @@ Builtin shops are defined in [data/shops.lua](https://github.com/overextended/ox
 
 ## Shop definition
 
-```lua
+```lua copy filename="data/shops.lua"
 {
     General = {
         name = 'Shop',
@@ -88,7 +88,7 @@ Shops can be added using `exports.ox_inventory:RegisterShop` on the server, howe
 
 ### Example
 
-```lua
+```lua copy
 exports.ox_inventory:RegisterShop('TestShop', {
     name = 'Test shop',
     inventory = {

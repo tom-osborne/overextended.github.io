@@ -6,7 +6,7 @@ A centralized way to track and disable [game controls](https://docs.fivem.net/do
 
 Call on frame to disable all stored controls.
 
-```lua
+```lua copy
 lib.disableControls()
 ```
 
@@ -15,7 +15,7 @@ lib.disableControls()
 Adds the specified control(s) to the stored list.  
 If the control is already being tracked, the stored counter will be incremented.
 
-```lua
+```lua copy
 lib.disableControls:Add(...)
 ```
 
@@ -27,7 +27,7 @@ lib.disableControls:Add(...)
 Removes the specified control(s) from the stored list.  
 If the stored counter for a given control is greater than one, the stored counter will be decremented.
 
-```lua
+```lua copy
 lib.disableControls:Remove(...)
 ```
 
@@ -38,7 +38,7 @@ lib.disableControls:Remove(...)
 
 Clears the stored counter(s) for the specified control(s).
 
-```lua
+```lua copy
 lib.disableControls:Clear(...)
 ```
 

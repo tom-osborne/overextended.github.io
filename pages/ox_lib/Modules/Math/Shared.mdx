@@ -12,7 +12,7 @@ math = lib.math
 
 Takes a string and returns a set of scalar values.
 
-```lua
+```lua copy
 math.toscalars(input, min, max, round)
 ```
 
@@ -29,7 +29,7 @@ Return:
 
 Takes a string or table and returns a vector value, or a number if only one value was found.
 
-```lua
+```lua copy
 math.tovector(input, min, max, round)
 ```
 
@@ -46,7 +46,7 @@ Return:
 
 Takes a surface normal and tries to convert it to a vector3 rotation.
 
-```lua
+```lua copy
 math.normaltorotation(input)
 ```
 
@@ -61,7 +61,7 @@ Return:
 Takes a string or table and returns a vector value, or a number if only one value was found.  
 Values are rounded and must be within the range of 0-255.
 
-```lua
+```lua copy
 math.torgba(input)
 ```
 
@@ -75,7 +75,7 @@ Return:
 
 Takes a hexadecimal string and returns three integers.
 
-```lua
+```lua copy
 math.hextorgb(input)
 ```
 
@@ -92,7 +92,7 @@ Return:
 
 Takes a number or string and formats it as a hexadecimal string.
 
-```lua
+```lua copy
 math.tohex(n, upper)
 ```
 
@@ -107,7 +107,7 @@ Return:
 
 Takes a number and formats it into grouped digits.
 
-```lua
+```lua copy
 math.groupdigits(number, seperator)
 ```
 
@@ -123,7 +123,7 @@ Return:
 
 Clamps a number between a lower and upper limit.
 
-```lua
+```lua copy
 math.clamp(number, lower, upper)
 ```
 
@@ -139,7 +139,7 @@ Return:
 
 Rounds a number to a whole number or to the specified number of decimal places.
 
-```lua
+```lua copy
 math.round(value, places)
 ```
 
@@ -154,7 +154,7 @@ Return:
 
 Calculates an intermediate value between `start` and `finish` based on the interpolation `factor`.
 
-```lua
+```lua copy
 math.interp(start, finish, factor)
 ```
 
@@ -172,7 +172,7 @@ Return:
 
 Linearly interpolates between two values over a specified duration, returning an iterator function that will run once per game-frame.
 
-```lua
+```lua copy
 math.lerp(start, finish, duration)
 ```
 

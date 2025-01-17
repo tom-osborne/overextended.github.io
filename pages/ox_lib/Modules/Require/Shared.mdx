@@ -1,4 +1,4 @@
-import { Callout } from 'nextra/components';
+import { Callout, FileTree } from 'nextra/components';
 
 # Shared
 
@@ -13,7 +13,7 @@ Loads the given module. The function starts by indexing the `loaded` table to de
 - Use `.` to separate directories in a path.
 - Modules can be loaded from external resources using `@resource.modname`.
 
-```lua
+```lua copy
 require 'modname'
 ```
 
@@ -21,7 +21,7 @@ require 'modname'
 
 Client modules must be defined in the `file` section of the resource manifest.
 
-```lua filename="fxmanifest.lua"
+```lua copy filename="fxmanifest.lua"
 file 'modname.lua'
 -- or
 files {
@@ -35,17 +35,22 @@ files {
 
 ### Usage Example
 
-```
-- resources/
-  - mylib/
-    - import.lua
-    - data/
-      - events.lua
-  - myresource/
-    - server.lua
-```
+<FileTree>
+  <FileTree.Folder name="/resources/" defaultOpen>
+    <FileTree.Folder name="/myLib/" defaultOpen>
+      <FileTree.File name="import.lua" />
+      <FileTree.Folder name="/data/" defaultOpen>
+        <FileTree.File name="events.lua" />
+      </FileTree.Folder>
+    </FileTree.Folder>
+    <FileTree.Folder name="/myResource/" defaultOpen>
+      <FileTree.File name="server.lua" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
 
-```lua filename="mylib/import.lua"
+
+```lua copy filename="mylib/import.lua"
 local mylib = {
   events = require 'data.events'
 }
@@ -55,13 +60,13 @@ print('Loaded mylib')
 return mylib
 ```
 
-```lua filename="mylib/data/events.lua"
+```lua copy filename="mylib/data/events.lua"
 return {
   disconnect = 'onPlayerDropped',
 }
 ```
 
-```lua filename="myresource/server.lua"
+```lua copy filename="myresource/server.lua"
 local mylib = require '@mylib.import'
 print(mylib.events.disconnect)
 ```
@@ -70,7 +75,7 @@ print(mylib.events.disconnect)
 
 Loads and runs a Lua file at the given path. Unlike require, the chunk is not cached for future use.
 
-```lua
+```lua copy
 lib.load(filePath, env)
 ```
 
@@ -81,13 +86,13 @@ lib.load(filePath, env)
 
 ### Usage Example
 
-```lua filename="myresource/import.lua"
+```lua copy filename="myresource/import.lua"
 local events = lib.load('data.events')
 
 print('Loaded events')
 ```
 
-```lua filename="myresource/data/events.lua"
+```lua copy filename="myresource/data/events.lua"
 return {
   disconnect = 'onPlayerDropped',
 }
@@ -97,7 +102,7 @@ return {
 
 Loads a JSON file at the given path and decodes it as a table.
 
-```lua
+```lua copy
 lib.loadJson(filePath)
 ```
 
@@ -106,7 +111,7 @@ lib.loadJson(filePath)
 
 ### Usage Example
 
-```lua filename="myresource/import.lua"
+```lua copy filename="myresource/import.lua"
 local events = lib.loadJson('data.events')
 
 print('Loaded events')

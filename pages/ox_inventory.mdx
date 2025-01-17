@@ -30,7 +30,7 @@ We **strongly** recommend referring to [Guides](../guides) for setting up Git, N
 
 ### Download a [release](https://github.com/overextended/ox_inventory/releases) or build the source code.
 
-```bash
+```bash copy filename="terminal"
 git clone https://github.com/overextended/ox_inventory.git
 cd ox_inventory/web
 pnpm i
@@ -47,7 +47,7 @@ These resources aren't required but provide additional functionality.
 
 It's important for your resources to start in a logical order to prevent errors from missing dependencies.
 
-```bash
+```bash copy filename="server.cfg"
 start oxmysql   # this should be one of the first resources
 start ox_lib
 start framework # the name of your framework (i.e. ox_core, es_extended, qbx_core)
@@ -59,7 +59,7 @@ start ox_inventory
 
 Resource configuration is handled using [convars](https://docs.fivem.net/docs/scripting-reference/convars/).
 
-```bash
+```bash copy
 ### Shared
 
 # Activate specific event handlers and functions (supported: ox, esx, qbx, nd)

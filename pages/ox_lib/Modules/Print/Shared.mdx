@@ -8,7 +8,7 @@ Resource name is always included.
 
 ## lib.print
 
-```lua
+```lua copy
 lib.print.error(...)
 lib.print.warn(...)
 lib.print.info(...)
@@ -21,7 +21,7 @@ lib.print.debug(...)
 
 ### Example
 
-```lua
+```lua copy
 lib.print.warn("query latency high: ", latency)
 ```
 
@@ -48,7 +48,7 @@ Use the following convars to set your print level. Prints less severe than the c
 For example, a level of info will print error, warn, and info, but not verbose nor debug. Defaults to info if not set.
 Resource specific print levels override the global convar.
 
-```bash
+```bash copy filename="server.cfg"
 set ox:printlevel "info"
 set ox:printlevel:ox_inventory "warn"
 set ox:printlevel:<resourceName> "<level>"

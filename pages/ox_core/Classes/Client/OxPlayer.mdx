@@ -13,7 +13,7 @@ title: OxPlayer
 
 Increases value of a status.
 
-```lua
+```lua copy copy
 player.addStatus(statusName, value)
 ```
 
@@ -28,7 +28,7 @@ player.addStatus(statusName, value)
 
 Returns a value from the players metadata.
 
-```lua
+```lua copy copy
 player.get(key)
 ```
 
@@ -42,7 +42,7 @@ player.get(key)
 
 Returns the player's current coordinates.
 
-```lua
+```lua copy copy
 player.getCoords()
 ```
 
@@ -53,7 +53,7 @@ player.getCoords()
 
 Returns the player's grade of a given group name, or the first matched name and grade in a filter.
 
-```lua
+```lua copy copy
 player.getGroup(filter)
 ```
 
@@ -67,7 +67,7 @@ player.getGroup(filter)
 
 Returns the player's name and grade of a group with a matching type.
 
-```lua
+```lua copy
 player.getGroupByType(type)
 ```
 
@@ -82,7 +82,7 @@ player.getGroupByType(type)
 
 Returns an object of all groups the player is currently in, using the group name as a key.
 
-```lua
+```lua copy
 player.getGroups()
 ```
 
@@ -93,7 +93,7 @@ player.getGroups()
 
 Returns the value of the status.
 
-```lua
+```lua copy
 player.getStatus(statusName)
 ```
 
@@ -107,7 +107,7 @@ player.getStatus(statusName)
 
 Returns an object containing all statuses, using the status name as the key.
 
-```lua
+```lua copy
 player.getStatuses()
 ```
 
@@ -118,7 +118,7 @@ player.getStatuses()
 
 Checks if a user has a permission, given by one of their groups.
 
-```lua
+```lua copy
 player.hasPermission(permission)
 ```
 
@@ -132,7 +132,7 @@ player.hasPermission(permission)
 
 Reduces the value of a status.
 
-```lua
+```lua copy
 player.removeStatus(statusName, value)
 ```
 
@@ -147,7 +147,7 @@ player.removeStatus(statusName, value)
 
 Listens for changes to the players metadata, specified by a key.
 
-```lua
+```lua copy
 player.on(key, cb(data))
 ```
 

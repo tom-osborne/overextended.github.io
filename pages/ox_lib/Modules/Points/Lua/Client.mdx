@@ -24,7 +24,7 @@ A table representing a point with the following properties.
 
 ## lib.points.new
 
-```lua
+```lua copy
 lib.points.new(data)
 ```
 
@@ -37,7 +37,7 @@ Returns:
 - point: `CPoint`
 
 ### Usage Example
-```lua
+```lua copy
 local point = lib.points.new({
     coords = GetEntityCoords(cache.ped),
     distance = 5,
@@ -65,7 +65,7 @@ end
 
 Get a table of all points created in the resource.
 
-```lua
+```lua copy
 lib.points.getAllPoints()
 ```
 
@@ -77,7 +77,7 @@ Return:
 
 Get an array of all points in range of the player.
 
-```lua
+```lua copy
 lib.points.getNearbyPoints()
 ```
 
@@ -89,7 +89,7 @@ Return:
 
 Get the data for the closest point to the player.
 
-```lua
+```lua copy
 lib.points.getClosestPoint()
 ```
 

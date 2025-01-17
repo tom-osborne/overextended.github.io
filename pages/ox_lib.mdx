@@ -20,7 +20,7 @@ We **strongly** recommend referring to [Guides](../guides) for setting up Git, N
 
 ### Download a [release](https://github.com/overextended/ox_lib/releases) or build the source code.
 
-```bash
+```bash copy filename="terminal"
 git clone https://github.com/overextended/ox_lib.git
 cd ox_lib/web
 pnpm i
@@ -31,7 +31,7 @@ pnpm build
 
 Resource configuration is handled using [convars](https://docs.fivem.net/docs/scripting-reference/convars/).
 
-```bash
+```bash copy filename="server.cfg"
 # https://v6.mantine.dev/theming/colors/#default-colors
 setr ox:primaryColor blue
 setr ox:primaryShade 8
@@ -40,7 +40,7 @@ setr ox:userLocales 1 # Allow users to select their locales using /ox_lib
 
 You'll also need to grant ace permissions to the resource.
 
-```bash
+```bash copy filename="server.cfg"
 add_ace resource.ox_lib command.add_ace allow
 add_ace resource.ox_lib command.remove_ace allow
 add_ace resource.ox_lib command.add_principal allow
@@ -56,7 +56,7 @@ add_ace resource.ox_lib command.remove_principal allow
 
 To enable the library inside of your resource just add `@ox_lib/init.lua` as a shared_script in your `fxmanifest.lua` file.
 
-```lua
+```lua copy filename="fxmanifest.lua"
 shared_scripts {
     '@ox_lib/init.lua',
 }
@@ -64,13 +64,13 @@ shared_scripts {
 
 Or if the library is the only shared script you use you can do:
 
-```lua
+```lua copy filename="fxmanifest.lua"
 shared_script '@ox_lib/init.lua'
 ```
 
 You can specify modules to import from inside your `fxmanifest.lua`, or load them dynamically.
 
-```lua
+```lua copy
 ox_libs {
     'locale',
     'math',
@@ -98,11 +98,11 @@ You can get the npm package [here](https://npmjs.com/package/@overextended/ox_li
 **Usage:**  
 You can either import the whole library object which contains all the functions for that scope (client/server/shared) or you can deconstruct it and import the functions you find needed at the time.
 
-```ts
+```ts copy
 import lib from '@overextended/ox_lib/server';
 ```
 
-```ts
+```ts copy
 import { versionCheck } from '@overextended/ox_lib/server';
 ```
 
@@ -119,14 +119,14 @@ If you want to use a different icon type, i.e apple as a brand, you need to defi
 <Tabs items={["Lua", "JS"]}>
 <Tab>
 
-```lua
+```lua copy
 icon = {'fab', 'apple'}
 ```
 
 </Tab>
 <Tab>
 
-```ts
+```ts copy
 icon: ['fab', 'apple'];
 ```
 

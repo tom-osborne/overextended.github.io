@@ -10,7 +10,7 @@ These events are triggered by ox_core when an action occurs. You should not trig
 
 When players are saved to the database.
 
-```lua
+```lua copy
 function(playersSaved: number)
 ```
 
@@ -18,7 +18,7 @@ function(playersSaved: number)
 
 When the active group of a character has changed.
 
-```lua
+```lua copy
 function(playerId: number, groupName: string)
 ```
 
@@ -26,7 +26,7 @@ function(playerId: number, groupName: string)
 
 When a character is added or removed from a group.
 
-```lua
+```lua copy
 function(playerId: number, groupName: string, grade?: number)
 ```
 
@@ -34,7 +34,7 @@ function(playerId: number, groupName: string, grade?: number)
 
 When a character receives a new license.
 
-```lua
+```lua copy
 function(playerId: number, licenseName: string)
 ```
 
@@ -42,7 +42,7 @@ function(playerId: number, licenseName: string)
 
 When a character's license is removed.
 
-```lua
+```lua copy
 function(playerId: number, licenseName: string)
 ```
 
@@ -50,7 +50,7 @@ function(playerId: number, licenseName: string)
 
 When a player logs out from their current character, crashes, or otherwise disconnects from the server.
 
-```lua
+```lua copy
 function(playerId: number, userId: number, charId: number)
 ```
 
@@ -58,7 +58,7 @@ function(playerId: number, userId: number, charId: number)
 
 When a player has created a new character.
 
-```lua
+```lua copy
 function(playerId: number, userId: number, charId: number)
 ```
 
@@ -66,7 +66,7 @@ function(playerId: number, userId: number, charId: number)
 
 When a player selects and loads a character.
 
-```lua
+```lua copy
 function(playerId: number, userId: number, charId: number)
 ```
 
@@ -74,7 +74,7 @@ function(playerId: number, userId: number, charId: number)
 
 When a character is deleted.
 
-```lua
+```lua copy
 function(playerId: number, userId: number, charId: number)
 ```
 
@@ -82,7 +82,7 @@ function(playerId: number, userId: number, charId: number)
 
 When vehicles are saved to the database.
 
-```lua
+```lua copy
 function(vehiclesSaved: number)
 ```
 
@@ -90,6 +90,6 @@ function(vehiclesSaved: number)
 
 When a `OxVehicle` has spawned.
 
-```lua
+```lua copy
 function(entityId: number, id: number)
 ```

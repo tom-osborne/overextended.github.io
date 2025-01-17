@@ -6,7 +6,7 @@ Simple and centralised dui creation, supporting sending message, change url and 
 
 Constructs instance of Dui.
 
-```lua
+```lua copy
 lib.dui:new(data)
 ```
 
@@ -31,7 +31,7 @@ Returns:
   - remove: `function`
 
 ### Usage Example
-```lua
+```lua copy
 local dui = lib.dui:new({
 	url = ("nui://%s/web/index.html"):format(cache.resource), 
 	width = 1920, 

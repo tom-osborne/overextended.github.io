@@ -6,7 +6,7 @@
 
 The response is handled in a separate coroutine.
 
-```lua
+```lua copy
 lib.callback(name, delay, cb, ...)
 ```
 
@@ -16,7 +16,7 @@ lib.callback(name, delay, cb, ...)
 - cb: `function`
 - ...: `any`
 
-```lua
+```lua copy
 lib.callback('ox_inventory:getItemCount', false, function(count)
     print(count)
 end, 'water', {type = 'fresh'})
@@ -26,7 +26,7 @@ end, 'water', {type = 'fresh'})
 
 The current coroutine is yielded until a response is received.
 
-```lua
+```lua copy
 lib.callback.await(name, delay, ...)
 ```
 
@@ -35,7 +35,7 @@ lib.callback.await(name, delay, ...)
   - Amount of time until this callback can be triggered again
 - ...: `any`
 
-```lua
+```lua copy
 local count = lib.callback.await('ox_inventory:getItemCount', false, 'water', {type = 'fresh'})
 print(count)
 ```
@@ -46,14 +46,14 @@ print(count)
 
 Register an event handler for responding to server requests.
 
-```lua
+```lua copy
 lib.callback.register(name, cb)
 ```
 
 - name: `string`
 - cb: `function`
 
-```lua
+```lua copy
 lib.callback.register('ox:getNearbyVehicles', function(radius)
     local nearbyVehicles = lib.getNearbyVehicles(GetEntityCoords(cache.ped), radius, true)
     return nearbyVehicles

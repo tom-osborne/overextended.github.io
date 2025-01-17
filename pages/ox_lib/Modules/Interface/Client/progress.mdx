@@ -13,12 +13,12 @@ Displays a running progress bar.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.progressBar(data)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     lib.progressBar(data)
@@ -82,7 +82,7 @@ Displays a running progress bar.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     if lib.progressBar({
         duration = 2000,
         label = 'Drinking water',
@@ -108,7 +108,7 @@ Displays a running progress bar.
       This function is **asynchronous** requiring you to do a `.then` callback on the promise or make your function `async`.
     </Callout>
 
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     if (await lib.progressBar({
@@ -142,12 +142,12 @@ Similar to `lib.progressBar` except it displays a circle and you can define a po
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.progressCircle(data)
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     lib.progressCircle(data)
@@ -213,7 +213,7 @@ Similar to `lib.progressBar` except it displays a circle and you can define a po
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     if lib.progressCircle({
         duration = 2000,
         position = 'bottom',
@@ -239,7 +239,7 @@ Similar to `lib.progressBar` except it displays a circle and you can define a po
       This function is **asynchronous** requiring you to do a `.then` callback on the promise or make your function `async`.
     </Callout>
 
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     if (await lib.progressCircle({
@@ -273,12 +273,12 @@ Returns true if a progress bar is currently active.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.progressActive()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     lib.progressActive()
@@ -293,12 +293,12 @@ progress bar can be cancelled then it cancels it.
 
 <Tabs items={["Lua", "JS"]}>
   <Tab>
-    ```lua
+    ```lua copy
     lib.cancelProgress()
     ```
   </Tab>
   <Tab>
-    ```ts
+    ```ts copy
     import lib from '@overextended/ox_lib/client'
 
     lib.cancelProgress()
