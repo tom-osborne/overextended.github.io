@@ -13,7 +13,7 @@ Ox.CreateAccount(ownerId, label)
 
 **Returns**
 
-- `OxAccount`
+- [`OxAccount`](/ox_core/Classes/Server/OxAccount)
 
 ## Ox.CreateGroup
 
@@ -132,7 +132,7 @@ Ox.GetAccount(accountId)
 
 **Returns**
 
-- `OxAccount`
+- [`OxAccount`](/ox_core/Classes/Server/OxAccount)
 
 ## Ox.GetCharacterAccount
 
@@ -148,7 +148,7 @@ Ox.GetCharacterAccount(id)
 
 **Returns**
 
-- `OxAccount`
+- [`OxAccount`](/ox_core/Classes/Server/OxAccount)
 
 ## Ox.GetCharIdFromStateId
 
@@ -181,7 +181,7 @@ Ox.GetGroupAccount(groupName)
 
 **Returns**
 
-- `OxAccount`
+- [`OxAccount`](/ox_core/Classes/Server/OxAccount)
 
 ## Ox.GetGroupsByType
 
@@ -217,7 +217,7 @@ Ox.GetGroup(name)
 
 ## Ox.GetPlayer
 
-Get an `OxPlayer` from its enity id.
+Get an `OxPlayer` from its entity id.
 
 ```lua copy
 Ox.GetPlayer(entityId)
@@ -229,7 +229,7 @@ Ox.GetPlayer(entityId)
 
 **Returns**
 
-- `OxPlayer`
+- [`OxPlayer`](/ox_core/Classes/Server/OxPlayer)
 
 ## Ox.GetPlayerFromFilter
 
@@ -247,7 +247,7 @@ Ox.GetPlayerFromFilter(filter)
 
 **Returns**
 
-- `OxPlayer`
+- [`OxPlayer`](/ox_core/Classes/Server/OxPlayer)
 
 ## Ox.GetPlayerFromUserId
 
@@ -263,7 +263,7 @@ Ox.GetPlayerFromUserId(userId)
 
 **Returns**
 
-- `OxPlayer`
+- [`OxPlayer`](/ox_core/Classes/Server/OxPlayer)
 
 ## Ox.GetPlayers
 
@@ -281,7 +281,7 @@ Ox.GetPlayers(filter)
 
 **Returns**
 
-- `OxPlayer[]`
+- [`OxPlayer[]`](/ox_core/Classes/Server/OxPlayer)
 
 ## Ox.GetVehicle
 
@@ -376,6 +376,18 @@ Ox.SetGroupPermission(groupName, grade, permission, value)
 - permission: `string`
 - value: `allow` | `deny`
 
+**Example**
+
+```lua
+-- Adding a permission to a group (server side)
+Ox.SetGroupPermission('police', 1, 'handcuff', 'allow')
+
+-- Checking if a player has the 'handcuff' permission
+if player.hasPermission('group.police.handcuff') then
+    -- Do something
+end
+```
+
 ## Ox.SpawnVehicle
 
 Spawns an `OxVehicle` with the given dbId, if it hasn't already been spawned.
@@ -393,3 +405,31 @@ Ox.SpawnVehicle(dbId, coords, heading)
 **Returns**
 
 - [`OxVehicle`](/ox_core/Classes/Server/OxVehicle)
+
+## Ox.GetLicense
+
+Get license data from its name.
+
+```lua
+Ox.GetLicense(name)
+```
+
+**Parameters**
+
+- name: `string`
+
+**Returns**
+
+- `OxLicense`
+
+## Ox.GetLicenses
+
+Get all licenses' data.
+
+```lua
+Ox.GetLicenses()
+```
+
+**Returns**
+
+- `OxLicense[]`
